@@ -1,0 +1,21 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2,
+p {
+  font-family: "Roboto", sans-serif;
+}
+
+.text-10 {
+  font-size: 10px;
+}
