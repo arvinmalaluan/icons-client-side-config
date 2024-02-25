@@ -17,7 +17,7 @@
   <body>
     <div class="grid grid-cols-12 gap-4">
       <div
-        class="col-span-2 bg-gray-50 flex flex-col justify-between items-start h-screen p-4"
+        class="col-span-2 border-r flex flex-col justify-between items-start h-screen p-4"
       >
         <section class="flex flex-col gap-4">
           <img src="./assets/logo.png" class="mb-4 h-10" alt="" />
@@ -64,8 +64,10 @@
       <div class="col-span-10 px-4 pt-6 overflow-y-scroll h-screen">
         <div class="flex justify-between items-center">
           <div>
-            <p class="text-2xl">Hi, welcome back!</p>
-            <p class="text-sm text-gray-500">
+            <p class="text-2xl font-semibold text-pri-color">
+              Hi, welcome back!
+            </p>
+            <p class="text-xs text-gray-500">
               Your web analytics dashboard that would elevate your decision
               making.
             </p>
@@ -74,85 +76,90 @@
           <div class="flex gap-4 items-center">
             <div class="">
               <p class="text-10 text-gray-500">START DATE</p>
-              <p class="text-sm">Oct. 10, 2023</p>
+              <p class="text-xs font-semibold">Oct. 10, 2023</p>
             </div>
             <div class="">
               <p class="text-10 text-gray-500">START DATE</p>
-              <p class="text-sm">Oct. 10, 2023</p>
+              <p class="text-xs font-semibold">Oct. 10, 2023</p>
             </div>
             <div class="">
               <p class="text-10 text-gray-500">START DATE</p>
-              <p class="text-sm">Oct. 10, 2023</p>
+              <p class="text-xs font-semibold">Oct. 10, 2023</p>
             </div>
-            <button class="bg-gray-500 py-2 px-4">Export</button>
+            <button class="ml-4 rounded py-2 px-4 text-sm pri-color">
+              Export
+            </button>
           </div>
         </div>
 
         <div class="border-b flex justify-between mt-6 mb-4">
           <div class="flex">
-            <p class="px-4 py-2 border-r">Overview</p>
-            <p class="px-4 py-2 border-r">Users</p>
-            <p class="px-4 py-2 border-r">Demographics</p>
-            <p class="px-4 py-2">More</p>
+            <p class="px-4 py-2 border-r text-xs text-gray-500">Overview</p>
+            <p class="px-4 py-2 border-r text-xs text-gray-500">Users</p>
+            <p class="px-4 py-2 border-r text-xs text-gray-500">Demographics</p>
+            <p class="px-4 py-2 text-xs text-gray-500">More</p>
           </div>
 
           <div class="flex">
-            <p class="px-4 py-2 border-r">Save Report</p>
-            <p class="px-4 py-2">Print Report</p>
+            <p class="px-4 py-2 border-r text-xs text-gray-500">Save Report</p>
+            <p class="px-4 py-2 text-xs text-gray-500">Print Report</p>
           </div>
         </div>
 
         <div class="grid grid-cols-10 gap-4 mb-4">
           <div class="col-span-6 border rounded overflow-hidden relative">
             <div class="flex px-4 pt-4 items-start justify-between">
-              <div>
-                <p>Website Audience Metrics</p>
-                <p class="text-sm">
+              <div class="mb-2">
+                <p class="text-xl font-semibold text-pri-color">
+                  Website Audience Metrics
+                </p>
+                <p class="text-xs text-gray-500">
                   Audience to which the users belonged while on the current date
                   range.
                 </p>
               </div>
+
               <div class="inline-flex rounded-md shadow-sm" role="group">
                 <button
                   type="button"
-                  class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-s-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white"
+                  class="px-4 py-2 text-xs text-gray-500 border border-gray-200 rounded-s-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-1 focus:ring-blue-400 focus:text-blue-700"
                 >
                   Day
                 </button>
                 <button
                   type="button"
-                  class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white"
+                  class="px-4 py-2 text-xs text-gray-500 border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-1 focus:ring-blue-400 focus:text-blue-700"
                 >
                   Week
                 </button>
                 <button
                   type="button"
-                  class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-e-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white"
+                  class="px-4 py-2 text-xs text-gray-500 border border-gray-200 rounded-e-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-1 focus:ring-blue-400 focus:text-blue-700"
                 >
                   Month
                 </button>
               </div>
             </div>
 
-            <div class="flex gap-4 mt-4 px-4">
+            <div class="flex gap-4 mt-4 mb-4 px-4">
               <div>
-                <p class="text-10">USERS</p>
-                <p class="text-xl font-semibold">13, 002</p>
+                <p class="text-10 text-gray-500">USERS</p>
+                <p class="text-sm font-semibold">13, 002</p>
               </div>
 
               <div>
-                <p class="text-10">BOUNCE RATE</p>
-                <p class="text-xl font-semibold">13, 002</p>
+                <p class="text-10 text-gray-500">BOUNCE RATE</p>
+                <p class="text-sm font-semibold">13, 002</p>
               </div>
 
               <div>
-                <p class="text-10">PAGE VIEWS</p>
-                <p class="text-xl font-semibold">13, 002</p>
+                <p class="text-10 text-gray-500">PAGE VIEWS</p>
+                <p class="text-sm font-semibold">13, 002</p>
               </div>
 
               <div>
-                <p class="text-10">SESSIONS</p>
-                <p class="text-xl font-semibold">13, 002</p>
+                <p class="text-10 text-gray-500">SESSIONS</p>
+                <p class="text-sm font-semibold">13, 002</p>
               </div>
             </div>
 
@@ -210,13 +217,19 @@
 
         <div class="grid grid-cols-12 gap-4 mb-4">
           <div class="col-span-4 border rounded p-4">
-            <p class="font-semibold">Page views by title page</p>
-            <p class="text-sm">This report is based on 100% of sessions.</p>
+            <p class="font-semibold text-xl text-pri-color">
+              Page views by title page
+            </p>
+            <p class="text-xs text-gray-500 mb-2">
+              This report is based on 100% of sessions.
+            </p>
 
             <div class="py-2 border-b">
               <div class="flex justify-between">
-                <p>Community Page</p>
-                <p>7, 045 visits</p>
+                <p class="font-semibold text-sm">Community Page</p>
+                <p class="text-sec-color text-sm font-semibold">
+                  7, 045 visits
+                </p>
               </div>
               <div class="flex justify-between">
                 <p class="text-xs text-gray-500">/general/community</p>
@@ -226,8 +239,10 @@
 
             <div class="py-2 border-b">
               <div class="flex justify-between">
-                <p>Community Page</p>
-                <p>7, 045 visits</p>
+                <p class="font-semibold text-sm">Messenger Page</p>
+                <p class="text-sec-color text-sm font-semibold">
+                  7, 045 visits
+                </p>
               </div>
               <div class="flex justify-between">
                 <p class="text-xs text-gray-500">/general/community</p>
@@ -237,8 +252,10 @@
 
             <div class="py-2 border-b">
               <div class="flex justify-between">
-                <p>Community Page</p>
-                <p>7, 045 visits</p>
+                <p class="font-semibold text-sm">Profile Page</p>
+                <p class="text-sec-color text-sm font-semibold">
+                  7, 045 visits
+                </p>
               </div>
               <div class="flex justify-between">
                 <p class="text-xs text-gray-500">/general/community</p>
@@ -248,8 +265,10 @@
 
             <div class="py-2 border-b">
               <div class="flex justify-between">
-                <p>Community Page</p>
-                <p>7, 045 visits</p>
+                <p class="font-semibold text-sm">Startups Profile Page</p>
+                <p class="text-sec-color text-sm font-semibold">
+                  7, 045 visits
+                </p>
               </div>
               <div class="flex justify-between">
                 <p class="text-xs text-gray-500">/general/community</p>
@@ -259,8 +278,10 @@
 
             <div class="py-2">
               <div class="flex justify-between">
-                <p>Community Page</p>
-                <p>7, 045 visits</p>
+                <p class="font-semibold text-sm">Partners Profile Page</p>
+                <p class="text-sec-color text-sm font-semibold">
+                  7, 045 visits
+                </p>
               </div>
               <div class="flex justify-between">
                 <p class="text-xs text-gray-500">/general/community</p>
@@ -269,7 +290,9 @@
             </div>
           </div>
           <div class="col-span-8 p-4 border rounded">
-            <p class="font-semibold mb-4">Demographics of User Sessions</p>
+            <p class="font-semibold mb-4 text-pri-color">
+              Demographics of User Sessions
+            </p>
             <div class="flex items-center h-5/6 w-full px-8">
               <div class="h-full w-2/5">
                 <canvas id="myDoughnut" width="full"></canvas>
@@ -338,7 +361,7 @@
           <div class="col-span-4">
             <div class="grid grid-cols-4 gap-4">
               <div class="col-span-4 border p-4 rounded">
-                <p class="font-semibold mb-2">Acquisition</p>
+                <p class="font-semibold mb-2 text-pri-color">Acquisition</p>
                 <p class="text-xs">
                   Tells you where your visitors originated from, such as search
                   engines, social networks or website referrals.
@@ -372,7 +395,7 @@
                 </div>
               </div>
               <div class="col-span-4 border p-4 rounded">
-                <p class="font-semibold mb-2">Sessions</p>
+                <p class="font-semibold mb-2 text-pri-color">Sessions</p>
                 <p class="text-xs">
                   Tells you where your visitors originated from, such as search
                   engines, social networks or website referrals.
@@ -408,7 +431,9 @@
             </div>
           </div>
           <div class="col-span-8 p-4 border rounded">
-            <p class="font-semibold mb-1">Users page visit frequency</p>
+            <p class="font-semibold mb-1 text-pri-color">
+              Users page visit frequency
+            </p>
             <p class="text-xs">
               Part of this date range occurs before the new users metric had
               been calculated, so the old users metric is displayed.

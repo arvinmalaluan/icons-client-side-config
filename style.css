@@ -19,3 +19,16 @@ p {
 .text-10 {
   font-size: 10px;
 }
+
+.pri-color {
+  background-color: #0a3172;
+  color: white;
+}
+
+.text-pri-color {
+  color: #0a3172;
+}
+
+.text-sec-color {
+  color: #fda302;
+}
