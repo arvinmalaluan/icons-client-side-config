@@ -27,8 +27,8 @@ const data = {
       borderWidth: 1,
       label: "Dataset",
       data: generateData(),
-      borderColor: "red",
-      backgroundColor: "rgba(255, 0, 0, 0.2)",
+      borderColor: "rgba(12, 53, 158, 0.8)",
+      backgroundColor: "rgba(12, 53, 158, 0.2)",
       fill: "start",
       radius: 0,
     },
@@ -226,8 +226,8 @@ var bard = {
   datasets: [
     {
       label: "Sample Bar Chart",
-      backgroundColor: "rgba(75, 192, 192, 0.2)",
-      borderColor: "rgba(75, 192, 192, 1)",
+      backgroundColor: "rgba( 252, 103, 54, 0.2)",
+      borderColor: "rgba( 252, 103, 54, 0.8)",
       borderWidth: 1,
       data: [
         10, 20, 15, 25, 10, 20, 15, 25, 10, 20, 15, 25, 10, 20, 15, 25, 10, 20,
@@ -309,8 +309,8 @@ var bard2 = {
   datasets: [
     {
       label: "Dataset 1",
-      backgroundColor: "rgba(75, 192, 192, 0.2)",
-      borderColor: "rgba(75, 192, 192, 1)",
+      backgroundColor: "rgba( 252, 103, 54, 0.2)",
+      borderColor: "rgba( 252, 103, 54, 0.8)",
       borderWidth: 1,
       data: [
         10, 20, 15, 25, 10, 20, 15, 25, 10, 20, 15, 25, 10, 20, 15, 25, 10, 20,
@@ -319,8 +319,8 @@ var bard2 = {
     },
     {
       label: "Dataset 2",
-      backgroundColor: "rgba(255, 99, 132, 0.2)",
-      borderColor: "rgba(255, 99, 132, 1)",
+      backgroundColor: "rgba(12, 53, 158, 0.2)",
+      borderColor: "rgba(12, 53, 158, 0.8)",
       borderWidth: 1,
       data: [
         15, 25, 20, 30, 15, 25, 20, 30, 15, 25, 20, 30, 15, 25, 20, 30, 15, 25,
@@ -377,11 +377,11 @@ var dnut_data = {
     {
       label: "Dataset 1",
       backgroundColor: [
-        "rgb(251, 168, 52)",
-        "rgb(12, 53, 158)",
-        "rgb(21, 245, 186)",
-        "rgb( 252, 103, 54)",
-        "rgb(236, 244, 214)",
+        "rgba(251, 168, 52, 0.8)",
+        "rgba(12, 53, 158, 0.8)",
+        "rgba(21, 245, 186, 0.8)",
+        "rgba( 252, 103, 54, 0.8)",
+        "rgba(236, 244, 214, 0.8)",
       ],
       hoverOffset: 4,
       data: [10, 20, 15, 25, 10],

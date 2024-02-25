@@ -32,3 +32,23 @@ p {
 .text-sec-color {
   color: #fda302;
 }
+
+.col-1 {
+  background-color: rgba(251, 168, 52, 0.8);
+}
+
+.col-2 {
+  background-color: rgba(12, 53, 158, 0.8);
+}
+
+.col-3 {
+  background-color: rgba(21, 245, 186, 0.8);
+}
+
+.col-4 {
+  background-color: rgba(252, 103, 54, 0.8);
+}
+
+.col-5 {
+  background-color: rgba(236, 244, 214, 0.8);
+}
