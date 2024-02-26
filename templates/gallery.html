@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+    />
+  </head>
+  <body>
+    <div class="grid grid-cols-12 gap-4">
+      <div
+        class="col-span-2 border-r flex flex-col justify-between items-start h-screen p-4"
+      >
+        <section class="flex flex-col w-full">
+          <a href="../index.html" class="px-4"
+            ><img src="../assets/logo.png" class="mb-4 h-10" alt=""
+          /></a>
+
+          <div class="flex items-center gap-2 px-4 py-2 w-100 hover:bg-gray-50">
+            <img src="../assets/icons/dashboard.svg" class="h-5 w-5" alt="" />
+            <a class="text-sm w-full" href="../index.html">Dashboard</a>
+          </div>
+
+          <div class="flex items-center gap-2 px-4 py-2 w-100 hover:bg-gray-50">
+            <img src="../assets/icons/user.svg" class="h-5 w-5" alt="" />
+            <a class="text-sm w-full" href="./user.html">Users</a>
+          </div>
+
+          <div class="flex items-center gap-2 px-4 py-2 w-100 hover:bg-gray-50">
+            <img src="../assets/icons/article.svg" class="h-5 w-5" alt="" />
+            <a class="text-sm w-full" href="./articles.html">Articles</a>
+          </div>
+
+          <div class="flex items-center gap-2 px-4 py-2 w-100 hover:bg-gray-50">
+            <img src="../assets/icons/program.svg" class="h-5 w-5" alt="" />
+            <a class="text-sm w-full" href="./programs.html">Programs</a>
+          </div>
+
+          <div class="flex items-center gap-2 px-4 py-2 w-100 hover:bg-gray-50">
+            <img src="../assets/icons/message.svg" class="h-5 w-5" alt="" />
+            <a class="text-sm w-full" href="./queries.html">Queries</a>
+          </div>
+
+          <div class="flex items-center gap-2 px-4 py-2 w-100 hover:bg-gray-50">
+            <img src="../assets/icons/gallery.svg" class="h-5 w-5" alt="" />
+            <a class="text-sm w-full" href="">Manage Gallery</a>
+          </div>
+        </section>
+
+        <section class="flex flex-col w-full">
+          <section
+            class="px-4 py-2 rounded flex gap-2 items-center hover:bg-gray-100"
+          >
+            <div
+              class="rounded flex items-center justify-center h-8 w-8 border border-gray-200 overflow-hidden"
+            >
+              <img src="../assets/icons/setting.svg" class="h-5 w-5" alt="" />
+            </div>
+
+            <p class="text-sm">Settings</p>
+          </section>
+
+          <section
+            class="px-4 py-2 rounded flex gap-2 items-center hover:bg-gray-100"
+          >
+            <div
+              class="rounded border border-gray-200 h-8 w-8 overflow-hidden flex-shrink-0 flex items-center justify-center"
+            >
+              <img src="../assets/icons/logout.svg" class="h-5 w-5" alt="" />
+            </div>
+            <p class="text-sm">Logout</p>
+          </section>
+        </section>
+      </div>
+
+      <div class="col-span-10 px-4 h-screen overflow-y-scroll pt-6">
+        <div
+          class="w-2/6 outline-0 text-xs bg-gray-100 rounded flex gap-2 items-center"
+        >
+          <img src="../assets/icons/search.svg" class="h-4 w-4 ml-3" alt="" />
+          <input
+            type="text"
+            class="w-full bg-transparent py-2 outline-0"
+            name=""
+            placeholder="Search here"
+            id=""
+          />
+        </div>
+
+        <p class="text-xl mt-6 mb-4 text-pri-color font-semibold">
+          Manage Gallery
+        </p>
+
+        <div class="relative overflow-x-auto rounded w-full flex flex-col">
+          <!-- For Grid Template -->
+          <div class="grid grid-cols-12">
+            <p
+              class="col-span-5 border-r border-b py-2 px-4 text-xs text-gray-500"
+            >
+              Name
+            </p>
+            <p
+              class="col-span-4 border-r border-b py-2 px-4 text-xs text-gray-500"
+            >
+              Date Modified
+            </p>
+            <p
+              class="col-span-1 border-r border-b py-2 px-4 text-xs text-gray-500"
+            >
+              Type
+            </p>
+            <p
+              class="col-span-1 border-r border-b py-2 px-4 text-xs text-gray-500"
+            >
+              Size
+            </p>
+            <p class="col-span-1 border-b py-2 px-4 text-xs text-gray-500">
+              Action
+            </p>
+          </div>
+
+          <p class="px-4 text-xs mt-4 text-gray-500">Yesterday</p>
+
+          <div class="flex flex-col gap-2 mt-2">
+            <div class="grid grid-cols-12">
+              <div class="col-span-5 px-4 text-sm">
+                427715230_1401504753845280_7778240470982132696_n.jpg
+              </div>
+              <div class="col-span-4 px-4 text-sm text-gray-500">
+                21/02/24 11:01 PM
+              </div>
+              <div class="col-span-1 px-4 text-sm text-gray-500">JPG File</div>
+              <div class="col-span-1 px-4 text-sm text-gray-500">1 KB</div>
+              <div class="col-span-1 px-4">
+                <button class="border px-2 py-2 rounded">
+                  <img src="../assets/icons/more.svg" class="h-3 w-3" alt="" />
+                </button>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-12">
+              <div class="col-span-5 px-4 text-sm">
+                427715230_1401504753845280_7778240470982132696_n.jpg
+              </div>
+              <div class="col-span-4 px-4 text-sm text-gray-500">
+                21/02/24 11:01 PM
+              </div>
+              <div class="col-span-1 px-4 text-sm text-gray-500">JPG File</div>
+              <div class="col-span-1 px-4 text-sm text-gray-500">1 KB</div>
+              <div class="col-span-1 px-4">
+                <button class="border px-2 py-2 rounded">
+                  <img src="../assets/icons/more.svg" class="h-3 w-3" alt="" />
+                </button>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-12">
+              <div class="col-span-5 px-4 text-sm">
+                427715230_1401504753845280_7778240470982132696_n.jpg
+              </div>
+              <div class="col-span-4 px-4 text-sm text-gray-500">
+                21/02/24 11:01 PM
+              </div>
+              <div class="col-span-1 px-4 text-sm text-gray-500">JPG File</div>
+              <div class="col-span-1 px-4 text-sm text-gray-500">1 KB</div>
+              <div class="col-span-1 px-4">
+                <button class="border px-2 py-2 rounded">
+                  <img src="../assets/icons/more.svg" class="h-3 w-3" alt="" />
+                </button>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-12">
+              <div class="col-span-5 px-4 text-sm">
+                427715230_1401504753845280_7778240470982132696_n.jpg
+              </div>
+              <div class="col-span-4 px-4 text-sm text-gray-500">
+                21/02/24 11:01 PM
+              </div>
+              <div class="col-span-1 px-4 text-sm text-gray-500">JPG File</div>
+              <div class="col-span-1 px-4 text-sm text-gray-500">1 KB</div>
+              <div class="col-span-1 px-4">
+                <button class="border px-2 py-2 rounded">
+                  <img src="../assets/icons/more.svg" class="h-3 w-3" alt="" />
+                </button>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-12">
+              <div class="col-span-5 px-4 text-sm">
+                427715230_1401504753845280_7778240470982132696_n.jpg
+              </div>
+              <div class="col-span-4 px-4 text-sm text-gray-500">
+                21/02/24 11:01 PM
+              </div>
+              <div class="col-span-1 px-4 text-sm text-gray-500">JPG File</div>
+              <div class="col-span-1 px-4 text-sm text-gray-500">1 KB</div>
+              <div class="col-span-1 px-4">
+                <button class="border px-2 py-2 rounded">
+                  <img src="../assets/icons/more.svg" class="h-3 w-3" alt="" />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <p class="px-4 text-xs mt-4 text-gray-500">This week</p>
+
+          <div class="flex flex-col gap-2 mt-2">
+            <div class="grid grid-cols-12">
+              <div class="col-span-5 px-4 text-sm">
+                427715230_1401504753845280_7778240470982132696_n.jpg
+              </div>
+              <div class="col-span-4 px-4 text-sm text-gray-500">
+                21/02/24 11:01 PM
+              </div>
+              <div class="col-span-1 px-4 text-sm text-gray-500">JPG File</div>
+              <div class="col-span-1 px-4 text-sm text-gray-500">1 KB</div>
+              <div class="col-span-1 px-4">
+                <button class="border px-2 py-2 rounded">
+                  <img src="../assets/icons/more.svg" class="h-3 w-3" alt="" />
+                </button>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-12">
+              <div class="col-span-5 px-4 text-sm">
+                427715230_1401504753845280_7778240470982132696_n.jpg
+              </div>
+              <div class="col-span-4 px-4 text-sm text-gray-500">
+                21/02/24 11:01 PM
+              </div>
+              <div class="col-span-1 px-4 text-sm text-gray-500">JPG File</div>
+              <div class="col-span-1 px-4 text-sm text-gray-500">1 KB</div>
+              <div class="col-span-1 px-4">
+                <button class="border px-2 py-2 rounded">
+                  <img src="../assets/icons/more.svg" class="h-3 w-3" alt="" />
+                </button>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-12">
+              <div class="col-span-5 px-4 text-sm">
+                427715230_1401504753845280_7778240470982132696_n.jpg
+              </div>
+              <div class="col-span-4 px-4 text-sm text-gray-500">
+                21/02/24 11:01 PM
+              </div>
+              <div class="col-span-1 px-4 text-sm text-gray-500">JPG File</div>
+              <div class="col-span-1 px-4 text-sm text-gray-500">1 KB</div>
+              <div class="col-span-1 px-4">
+                <button class="border px-2 py-2 rounded">
+                  <img src="../assets/icons/more.svg" class="h-3 w-3" alt="" />
+                </button>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-12">
+              <div class="col-span-5 px-4 text-sm">
+                427715230_1401504753845280_7778240470982132696_n.jpg
+              </div>
+              <div class="col-span-4 px-4 text-sm text-gray-500">
+                21/02/24 11:01 PM
+              </div>
+              <div class="col-span-1 px-4 text-sm text-gray-500">JPG File</div>
+              <div class="col-span-1 px-4 text-sm text-gray-500">1 KB</div>
+              <div class="col-span-1 px-4">
+                <button class="border px-2 py-2 rounded">
+                  <img src="../assets/icons/more.svg" class="h-3 w-3" alt="" />
+                </button>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-12">
+              <div class="col-span-5 px-4 text-sm">
+                427715230_1401504753845280_7778240470982132696_n.jpg
+              </div>
+              <div class="col-span-4 px-4 text-sm text-gray-500">
+                21/02/24 11:01 PM
+              </div>
+              <div class="col-span-1 px-4 text-sm text-gray-500">JPG File</div>
+              <div class="col-span-1 px-4 text-sm text-gray-500">1 KB</div>
+              <div class="col-span-1 px-4">
+                <button class="border px-2 py-2 rounded">
+                  <img src="../assets/icons/more.svg" class="h-3 w-3" alt="" />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <p class="px-4 text-xs mt-4 text-gray-500">This month</p>
+
+          <div class="flex flex-col gap-2 mt-2">
+            <div class="grid grid-cols-12">
+              <div class="col-span-5 px-4 text-sm">
+                427715230_1401504753845280_7778240470982132696_n.jpg
+              </div>
+              <div class="col-span-4 px-4 text-sm text-gray-500">
+                21/02/24 11:01 PM
+              </div>
+              <div class="col-span-1 px-4 text-sm text-gray-500">JPG File</div>
+              <div class="col-span-1 px-4 text-sm text-gray-500">1 KB</div>
+              <div class="col-span-1 px-4">
+                <button class="border px-2 py-2 rounded">
+                  <img src="../assets/icons/more.svg" class="h-3 w-3" alt="" />
+                </button>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-12">
+              <div class="col-span-5 px-4 text-sm">
+                427715230_1401504753845280_7778240470982132696_n.jpg
+              </div>
+              <div class="col-span-4 px-4 text-sm text-gray-500">
+                21/02/24 11:01 PM
+              </div>
+              <div class="col-span-1 px-4 text-sm text-gray-500">JPG File</div>
+              <div class="col-span-1 px-4 text-sm text-gray-500">1 KB</div>
+              <div class="col-span-1 px-4">
+                <button class="border px-2 py-2 rounded">
+                  <img src="../assets/icons/more.svg" class="h-3 w-3" alt="" />
+                </button>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-12">
+              <div class="col-span-5 px-4 text-sm">
+                427715230_1401504753845280_7778240470982132696_n.jpg
+              </div>
+              <div class="col-span-4 px-4 text-sm text-gray-500">
+                21/02/24 11:01 PM
+              </div>
+              <div class="col-span-1 px-4 text-sm text-gray-500">JPG File</div>
+              <div class="col-span-1 px-4 text-sm text-gray-500">1 KB</div>
+              <div class="col-span-1 px-4">
+                <button class="border px-2 py-2 rounded">
+                  <img src="../assets/icons/more.svg" class="h-3 w-3" alt="" />
+                </button>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-12">
+              <div class="col-span-5 px-4 text-sm">
+                427715230_1401504753845280_7778240470982132696_n.jpg
+              </div>
+              <div class="col-span-4 px-4 text-sm text-gray-500">
+                21/02/24 11:01 PM
+              </div>
+              <div class="col-span-1 px-4 text-sm text-gray-500">JPG File</div>
+              <div class="col-span-1 px-4 text-sm text-gray-500">1 KB</div>
+              <div class="col-span-1 px-4">
+                <button class="border px-2 py-2 rounded">
+                  <img src="../assets/icons/more.svg" class="h-3 w-3" alt="" />
+                </button>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-12">
+              <div class="col-span-5 px-4 text-sm">
+                427715230_1401504753845280_7778240470982132696_n.jpg
+              </div>
+              <div class="col-span-4 px-4 text-sm text-gray-500">
+                21/02/24 11:01 PM
+              </div>
+              <div class="col-span-1 px-4 text-sm text-gray-500">JPG File</div>
+              <div class="col-span-1 px-4 text-sm text-gray-500">1 KB</div>
+              <div class="col-span-1 px-4">
+                <button class="border px-2 py-2 rounded">
+                  <img src="../assets/icons/more.svg" class="h-3 w-3" alt="" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

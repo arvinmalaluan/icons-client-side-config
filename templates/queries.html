@@ -34,7 +34,7 @@
 
           <div class="flex items-center gap-2 px-4 py-2 w-100 hover:bg-gray-50">
             <img src="../assets/icons/article.svg" class="h-5 w-5" alt="" />
-            <a class="text-sm w-full" href="">Articles</a>
+            <a class="text-sm w-full" href="./articles.html">Articles</a>
           </div>
 
           <div class="flex items-center gap-2 px-4 py-2 w-100 hover:bg-gray-50">
@@ -44,7 +44,7 @@
 
           <div class="flex items-center gap-2 px-4 py-2 w-100 hover:bg-gray-50">
             <img src="../assets/icons/message.svg" class="h-5 w-5" alt="" />
-            <a class="text-sm w-full" href="./queries.html">Queries</a>
+            <a class="text-sm w-full" href="">Queries</a>
           </div>
 
           <div class="flex items-center gap-2 px-4 py-2 w-100 hover:bg-gray-50">
@@ -94,7 +94,7 @@
         </div>
 
         <p class="text-xl mt-6 mb-4 text-pri-color font-semibold">
-          Manage Articles
+          Manage Queries
         </p>
 
         <div class="flex justify-between">
@@ -106,12 +106,74 @@
               class="text-xs px-4 py-2 border rounded w-2/4"
               id=""
             />
-            <button class="border px-4 py-2">
-              <div class="flex gap-2">
-                <img src="../assets/icons/add.svg" class="h-4 w-4" alt="" />
-                <p class="text-xs">New Post</p>
+
+            <div class="relative">
+              <button
+                id="dropdownDividerButton"
+                data-dropdown-toggle="dropdownDivider"
+                class="bg-white border rounded text-xs px-4 py-2 text-center inline-flex items-center"
+                type="button"
+              >
+                by Status
+                <svg
+                  class="w-2.5 h-2.5 ms-3"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 10 6"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m1 1 4 4 4-4"
+                  />
+                </svg>
+              </button>
+
+              <!-- Dropdown menu -->
+              <div
+                id="dropdownDivider"
+                class="z-10 hidden bg-white rounded shadow-md w-full absolute top-10"
+              >
+                <ul
+                  class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                  aria-labelledby="dropdownDividerButton"
+                >
+                  <li>
+                    <a href="#" class="block">
+                      <div class="flex items-center px-4 py-2">
+                        <input
+                          id="default-checkbox"
+                          type="checkbox"
+                          value=""
+                          class="w-4 h-4 text-blue-600 bg-gray-100"
+                        />
+                        <label for="default-checkbox" class="ms-2 text-sm"
+                          >Read</label
+                        >
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="block">
+                      <div class="flex items-center px-4 py-2">
+                        <input
+                          id="default-checkbox"
+                          type="checkbox"
+                          value=""
+                          class="w-4 h-4 text-blue-600 bg-gray-100"
+                        />
+                        <label for="default-checkbox" class="ms-2 text-sm"
+                          >Unread</label
+                        >
+                      </div>
+                    </a>
+                  </li>
+                </ul>
               </div>
-            </button>
+            </div>
           </div>
 
           <div class="w-full flex items-center justify-end gap-2">
@@ -129,7 +191,7 @@
               class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
             >
               <tr>
-                <th scope="col" class="p-4">
+                <th scope="col" class="p-4 w-1/12">
                   <div class="flex items-center">
                     <input
                       id="checkbox-all-search"
@@ -141,11 +203,11 @@
                     >
                   </div>
                 </th>
-                <th scope="col" class="px-6 py-3 w-1/12">ID</th>
-                <th scope="col" class="px-6 py-3 w-6/12">Title</th>
-                <th scope="col" class="px-6 py-3 w-3/12">Date Posted</th>
-                <th scope="col" class="px-6 py-3 w-1/12">Views</th>
-                <th scope="col" class="px-6 py-3 w-1/12">Actions</th>
+                <th scope="col" class="px-6 py-3 w-3/12">Email</th>
+                <th scope="col" class="px-6 py-3 w-4/12">Subject</th>
+                <th scope="col" class="px-6 py-3 w-2/12">Date Received</th>
+                <th scope="col" class="px-6 py-3 w-1/12">Status</th>
+                <th scope="col" class="px-6 py-3 w-1/12">Action</th>
               </tr>
             </thead>
 
@@ -165,33 +227,26 @@
                     >
                   </div>
                 </td>
-                <td class="px-6 py-4">Silver</td>
                 <th
                   scope="row"
                   class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
                 >
-                  Apple MacBook Pro 17"
+                  john.doe@example.com
                 </th>
-                <td class="px-6 py-4">Laptop</td>
-                <td class="px-6 py-4">11</td>
+                <td class="px-6 py-4">Project Proposal</td>
+                <td class="px-6 py-4">2024-02-26 09:15 AM</td>
+                <td class="px-6 py-4">Unread</td>
                 <td class="flex items-center px-6 py-4">
-                  <a
-                    href="#"
-                    class="font-medium text-gray-400 dark:text-gray-500 hover:underline pr-2"
-                    >View</a
-                  >
-                  <a
-                    href="#"
-                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline border-l px-2"
-                    >Edit</a
-                  >
-                  <a
-                    href="#"
-                    class="font-medium text-red-600 dark:text-red-500 hover:underline border-l px-2"
-                    >Remove</a
-                  >
+                  <button class="border px-2 py-2 rounded">
+                    <img
+                      src="../assets/icons/more.svg"
+                      class="h-3 w-3"
+                      alt=""
+                    />
+                  </button>
                 </td>
               </tr>
+
               <tr
                 class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
               >
@@ -207,33 +262,26 @@
                     >
                   </div>
                 </td>
-                <td class="px-6 py-4">White</td>
                 <th
                   scope="row"
                   class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
                 >
-                  Microsoft Surface Pro
+                  info@companyxyz.com
                 </th>
-                <td class="px-6 py-4">Laptop PC</td>
-                <td class="px-6 py-4">11</td>
+                <td class="px-6 py-4">Inquiry about Services</td>
+                <td class="px-6 py-4">2024-02-25 03:30 PM</td>
+                <td class="px-6 py-4">Read</td>
                 <td class="flex items-center px-6 py-4">
-                  <a
-                    href="#"
-                    class="font-medium text-gray-400 dark:text-gray-500 hover:underline pr-2"
-                    >View</a
-                  >
-                  <a
-                    href="#"
-                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline border-l px-2"
-                    >Edit</a
-                  >
-                  <a
-                    href="#"
-                    class="font-medium text-red-600 dark:text-red-500 hover:underline border-l px-2"
-                    >Remove</a
-                  >
+                  <button class="border px-2 py-2 rounded">
+                    <img
+                      src="../assets/icons/more.svg"
+                      class="h-3 w-3"
+                      alt=""
+                    />
+                  </button>
                 </td>
               </tr>
+
               <tr
                 class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
               >
@@ -249,33 +297,26 @@
                     >
                   </div>
                 </td>
-                <td class="px-6 py-4">Black</td>
                 <th
                   scope="row"
                   class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
                 >
-                  Magic Mouse 2
+                  support@techworld.com
                 </th>
-                <td class="px-6 py-4">Accessories</td>
-                <td class="px-6 py-4">11</td>
+                <td class="px-6 py-4">Partnership Opportunity</td>
+                <td class="px-6 py-4">2024-02-24 11:45 AM</td>
+                <td class="px-6 py-4">Unread</td>
                 <td class="flex items-center px-6 py-4">
-                  <a
-                    href="#"
-                    class="font-medium text-gray-400 dark:text-gray-500 hover:underline pr-2"
-                    >View</a
-                  >
-                  <a
-                    href="#"
-                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline border-l px-2"
-                    >Edit</a
-                  >
-                  <a
-                    href="#"
-                    class="font-medium text-red-600 dark:text-red-500 hover:underline border-l px-2"
-                    >Remove</a
-                  >
+                  <button class="border px-2 py-2 rounded">
+                    <img
+                      src="../assets/icons/more.svg"
+                      class="h-3 w-3"
+                      alt=""
+                    />
+                  </button>
                 </td>
               </tr>
+
               <tr
                 class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
               >
@@ -291,33 +332,26 @@
                     >
                   </div>
                 </td>
-                <td class="px-6 py-4">Black</td>
                 <th
                   scope="row"
                   class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
                 >
-                  Apple Watch
+                  jane.smith@gmail.com
                 </th>
-                <td class="px-6 py-4">Watches</td>
-                <td class="px-6 py-4">11</td>
+                <td class="px-6 py-4">Product Demo Request</td>
+                <td class="px-6 py-4">2024-02-23 02:20 PM</td>
+                <td class="px-6 py-4">Read</td>
                 <td class="flex items-center px-6 py-4">
-                  <a
-                    href="#"
-                    class="font-medium text-gray-400 dark:text-gray-500 hover:underline pr-2"
-                    >View</a
-                  >
-                  <a
-                    href="#"
-                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline border-l px-2"
-                    >Edit</a
-                  >
-                  <a
-                    href="#"
-                    class="font-medium text-red-600 dark:text-red-500 hover:underline border-l px-2"
-                    >Remove</a
-                  >
+                  <button class="border px-2 py-2 rounded">
+                    <img
+                      src="../assets/icons/more.svg"
+                      class="h-3 w-3"
+                      alt=""
+                    />
+                  </button>
                 </td>
               </tr>
+
               <tr
                 class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
               >
@@ -333,33 +367,26 @@
                     >
                   </div>
                 </td>
-                <td class="px-6 py-4">Silver</td>
                 <th
                   scope="row"
                   class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
                 >
-                  Apple iMac
+                  contact@startupabc.com
                 </th>
-                <td class="px-6 py-4">PC</td>
-                <td class="px-6 py-4">11</td>
+                <td class="px-6 py-4">Funding Inquiry</td>
+                <td class="px-6 py-4">2024-02-22 10:10 AM</td>
+                <td class="px-6 py-4">Unread</td>
                 <td class="flex items-center px-6 py-4">
-                  <a
-                    href="#"
-                    class="font-medium text-gray-400 dark:text-gray-500 hover:underline pr-2"
-                    >View</a
-                  >
-                  <a
-                    href="#"
-                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline border-l px-2"
-                    >Edit</a
-                  >
-                  <a
-                    href="#"
-                    class="font-medium text-red-600 dark:text-red-500 hover:underline border-l px-2"
-                    >Remove</a
-                  >
+                  <button class="border px-2 py-2 rounded">
+                    <img
+                      src="../assets/icons/more.svg"
+                      class="h-3 w-3"
+                      alt=""
+                    />
+                  </button>
                 </td>
               </tr>
+
               <tr
                 class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
               >
@@ -375,33 +402,26 @@
                     >
                   </div>
                 </td>
-                <td class="px-6 py-4">White</td>
                 <th
                   scope="row"
                   class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
                 >
-                  Apple AirPods
+                  info@techinnovators.com
                 </th>
-                <td class="px-6 py-4">Accessories</td>
-                <td class="px-6 py-4">11</td>
+                <td class="px-6 py-4">Technical Support</td>
+                <td class="px-6 py-4">2024-02-20 01:30 PM</td>
+                <td class="px-6 py-4">Read</td>
                 <td class="flex items-center px-6 py-4">
-                  <a
-                    href="#"
-                    class="font-medium text-gray-400 dark:text-gray-500 hover:underline pr-2"
-                    >View</a
-                  >
-                  <a
-                    href="#"
-                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline border-l px-2"
-                    >Edit</a
-                  >
-                  <a
-                    href="#"
-                    class="font-medium text-red-600 dark:text-red-500 hover:underline border-l px-2"
-                    >Remove</a
-                  >
+                  <button class="border px-2 py-2 rounded">
+                    <img
+                      src="../assets/icons/more.svg"
+                      class="h-3 w-3"
+                      alt=""
+                    />
+                  </button>
                 </td>
               </tr>
+
               <tr
                 class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
               >
@@ -417,33 +437,26 @@
                     >
                   </div>
                 </td>
-                <td class="px-6 py-4">Gold</td>
                 <th
                   scope="row"
                   class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
                 >
-                  iPad Pro
+                  partnership@xyzcorporation
                 </th>
-                <td class="px-6 py-4">Tablet</td>
-                <td class="px-6 py-4">11</td>
+                <td class="px-6 py-4">Collaboration Proposal</td>
+                <td class="px-6 py-4">2024-02-19 08:40 AM</td>
+                <td class="px-6 py-4">Unread</td>
                 <td class="flex items-center px-6 py-4">
-                  <a
-                    href="#"
-                    class="font-medium text-gray-400 dark:text-gray-500 hover:underline pr-2"
-                    >View</a
-                  >
-                  <a
-                    href="#"
-                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline border-l px-2"
-                    >Edit</a
-                  >
-                  <a
-                    href="#"
-                    class="font-medium text-red-600 dark:text-red-500 hover:underline border-l px-2"
-                    >Remove</a
-                  >
+                  <button class="border px-2 py-2 rounded">
+                    <img
+                      src="../assets/icons/more.svg"
+                      class="h-3 w-3"
+                      alt=""
+                    />
+                  </button>
                 </td>
               </tr>
+
               <tr
                 class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
               >
@@ -459,33 +472,26 @@
                     >
                   </div>
                 </td>
-                <td class="px-6 py-4">Black</td>
                 <th
                   scope="row"
                   class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
                 >
-                  Magic Keyboard
+                  hr@talentgroup.com
                 </th>
-                <td class="px-6 py-4">Accessories</td>
-                <td class="px-6 py-4">11</td>
+                <td class="px-6 py-4">Job Application</td>
+                <td class="px-6 py-4">2024-02-18 05:55 PM</td>
+                <td class="px-6 py-4">Unread</td>
                 <td class="flex items-center px-6 py-4">
-                  <a
-                    href="#"
-                    class="font-medium text-gray-400 dark:text-gray-500 hover:underline pr-2"
-                    >View</a
-                  >
-                  <a
-                    href="#"
-                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline border-l px-2"
-                    >Edit</a
-                  >
-                  <a
-                    href="#"
-                    class="font-medium text-red-600 dark:text-red-500 hover:underline border-l px-2"
-                    >Remove</a
-                  >
+                  <button class="border px-2 py-2 rounded">
+                    <img
+                      src="../assets/icons/more.svg"
+                      class="h-3 w-3"
+                      alt=""
+                    />
+                  </button>
                 </td>
               </tr>
+
               <tr
                 class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
               >
@@ -501,33 +507,26 @@
                     >
                   </div>
                 </td>
-                <td class="px-6 py-4">Black</td>
                 <th
                   scope="row"
                   class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
                 >
-                  Apple TV 4K
+                  sales@newventure.com
                 </th>
-                <td class="px-6 py-4">TV</td>
-                <td class="px-6 py-4">11</td>
+                <td class="px-6 py-4">Sales Inquiry</td>
+                <td class="px-6 py-4">2024-02-21 04:50 PM</td>
+                <td class="px-6 py-4">Read</td>
                 <td class="flex items-center px-6 py-4">
-                  <a
-                    href="#"
-                    class="font-medium text-gray-400 dark:text-gray-500 hover:underline pr-2"
-                    >View</a
-                  >
-                  <a
-                    href="#"
-                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline border-l px-2"
-                    >Edit</a
-                  >
-                  <a
-                    href="#"
-                    class="font-medium text-red-600 dark:text-red-500 hover:underline border-l px-2"
-                    >Remove</a
-                  >
+                  <button class="border px-2 py-2 rounded">
+                    <img
+                      src="../assets/icons/more.svg"
+                      class="h-3 w-3"
+                      alt=""
+                    />
+                  </button>
                 </td>
               </tr>
+
               <tr
                 class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
               >
@@ -543,31 +542,23 @@
                     >
                   </div>
                 </td>
-                <td class="px-6 py-4">Silver</td>
                 <th
                   scope="row"
                   class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
                 >
-                  AirTag
+                  support@customerservice.com
                 </th>
-                <td class="px-6 py-4">Accessories</td>
-                <td class="px-6 py-4">11</td>
+                <td class="px-6 py-4">Service Inquiry</td>
+                <td class="px-6 py-4">2024-02-17 12:25 PM</td>
+                <td class="px-6 py-4">Read</td>
                 <td class="flex items-center px-6 py-4">
-                  <a
-                    href="#"
-                    class="font-medium text-gray-400 dark:text-gray-500 hover:underline pr-2"
-                    >View</a
-                  >
-                  <a
-                    href="#"
-                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline border-l px-2"
-                    >Edit</a
-                  >
-                  <a
-                    href="#"
-                    class="font-medium text-red-600 dark:text-red-500 hover:underline border-l px-2"
-                    >Remove</a
-                  >
+                  <button class="border px-2 py-2 rounded">
+                    <img
+                      src="../assets/icons/more.svg"
+                      class="h-3 w-3"
+                      alt=""
+                    />
+                  </button>
                 </td>
               </tr>
             </tbody>
@@ -657,5 +648,13 @@
         </div>
       </div>
     </div>
+
+    <script>
+      document
+        .getElementById("dropdownDividerButton")
+        .addEventListener("click", function () {
+          document.getElementById("dropdownDivider").classList.toggle("hidden");
+        });
+    </script>
   </body>
 </html>
