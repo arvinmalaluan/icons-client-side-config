@@ -38,3 +38,10 @@ p {
 .text-sec-color {
   color: #fda302;
 }
+
+.pri-color {
+  background-color: #0a3172;
+}
+.sec-color {
+  background-color: #fda102;
+}

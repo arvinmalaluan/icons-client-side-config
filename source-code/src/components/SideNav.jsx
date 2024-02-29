@@ -2,10 +2,25 @@ import svgExports from "../assets/svg/exports";
 import hoverUtils from "../utils/onHover";
 import clickUtils from "../utils/onClick";
 import image_logo from "../assets/images/logo.png";
+import useLocationHook from "../hooks/useLocationHook";
+import { Link } from "react-router-dom";
 
 const SideNav = () => {
+  const MyAList = (props) => {
+    return (
+      <Link
+        to={props.path}
+        className={`px-2 py-1 rounded hover:bg-gray-200 ${
+          useLocationHook(props.path) && "font-semibold text-pri-color"
+        }`}
+      >
+        {props.name}
+      </Link>
+    );
+  };
+
   return (
-    <>
+    <div>
       <div
         className="w-[260px] h-full bg-gray-50 relative px-8 py-4"
         id="side-bar"
@@ -17,35 +32,21 @@ const SideNav = () => {
 
           <p className="pb-1 mt-8 text-xs border-b">Dashboard</p>
           <div className="flex flex-col mt-1">
-            <a href="" className="px-2 py-1 rounded hover:bg-gray-200">
-              Overview
-            </a>
+            <MyAList name="Dashboard" path="/" />
           </div>
 
           <p className="pb-1 mt-8 text-xs border-b">Manage</p>
           <div className="flex flex-col mt-1">
-            <a href="" className="px-2 py-1 rounded hover:bg-gray-200">
-              Users
-            </a>
-            <a href="" className="px-2 py-1 rounded hover:bg-gray-200">
-              Articles
-            </a>
-            <a href="" className="px-2 py-1 rounded hover:bg-gray-200">
-              Programs
-            </a>
-            <a href="" className="px-2 py-1 rounded hover:bg-gray-200">
-              Queries
-            </a>
+            <MyAList name="Users" path="/users" />
+            <MyAList name="Articles" path="/articles" />
+            <MyAList name="Programs" path="/programs" />
+            <MyAList name="Queries" path="/queries" />
           </div>
 
           <p className="pb-1 mt-8 text-xs border-b">Interact</p>
           <div className="flex flex-col mt-1">
-            <a href="" className="px-2 py-1 rounded hover:bg-gray-200">
-              Community
-            </a>
-            <a href="" className="px-2 py-1 rounded hover:bg-gray-200">
-              Messenger
-            </a>
+            <MyAList name="Community" path="/community" />
+            <MyAList name="Messenger" path="/messenger" />
           </div>
         </div>
 
@@ -85,7 +86,7 @@ const SideNav = () => {
           <svgExports.ArrowForSideBarLeft />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
