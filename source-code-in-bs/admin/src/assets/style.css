@@ -55,3 +55,24 @@
 .py-4 {
   padding-block: 16px;
 }
+
+.toggle-side-pos {
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  right: -30px;
+  translate: translate(-50%, -50%);
+}
+
+.svg-icon-size {
+  height: 24px;
+  width: 24px;
+}
+
+.w-1240 {
+  width: 1240px;
+}
+
+.close-toggle {
+  margin-left: -260px;
+}
