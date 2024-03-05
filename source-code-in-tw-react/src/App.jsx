@@ -5,6 +5,8 @@ import Dashboard from "./pages/Dashboard";
 import Users from "./pages/Users";
 import Articles from "./pages/Articles";
 import Programs from "./pages/Programs";
+import Community from "./pages/Community";
+import Messenger from "./pages/Messenger";
 
 function App() {
   return (
@@ -17,8 +19,8 @@ function App() {
         <Route path="/articles" element={<Articles />} />
         <Route path="/programs" element={<Programs />} />
         <Route path="/queries" element={<Dashboard />} />
-        <Route path="/community" element={<Dashboard />} />
-        <Route path="/messenger" element={<Dashboard />} />
+        <Route path="/community" element={<Community />} />
+        <Route path="/messenger" element={<Messenger />} />
       </Routes>
     </div>
   );

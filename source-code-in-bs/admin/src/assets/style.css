@@ -6,6 +6,10 @@
   margin: 0;
 }
 
+p {
+  margin: 0 !important;
+}
+
 .default {
   color: rgba(0, 0, 0, 0.5);
   text-decoration: none;
@@ -32,15 +36,23 @@
 }
 
 .border-r {
-  border-right: 1px solid whitesmoke;
+  border-right: 1px solid whitesmoke !important;
 }
 
 .border-b {
   border-bottom: 1px solid whitesmoke;
 }
 
+.border-l {
+  border-left: 1px solid whitesmoke;
+}
+
 .text-xs {
-  font-size: 12px;
+  font-size: 12px !important;
+}
+
+.text-sm {
+  font-size: 14px !important;
 }
 
 .logo-styles {
@@ -75,4 +87,35 @@
 
 .close-toggle {
   margin-left: -260px;
+}
+
+.w-90 {
+  width: 90%;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.button-tab {
+  border: none;
+  padding: 8px 8px;
+  background-color: transparent;
+  font-size: 14px;
+}
+
+.rounded {
+  border-radius: 2px;
+}
+
+.rounded-left {
+  border-radius: 4px 0 0 4px;
+}
+
+.rounded-right {
+  border-radius: 0 4px 4px 0;
+}
+
+.p-sm {
+  padding: 16px 4px;
 }
