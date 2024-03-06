@@ -3,16 +3,26 @@ const getId = (id) => {
 };
 
 const hideSide = (act, div, btn) => {
+  const bool = window.location.pathname.includes("template.html");
+
   if (act) {
     !div.classList.contains("close-toggle") &&
       div.classList.add("close-toggle");
 
-    btn.setAttribute("src", "./src/assets/svgs/ArrowSideRight.svg");
+    const src = bool
+      ? "../../src/assets/svgs/ArrowSideRight.svg"
+      : "./src/assets/svgs/ArrowSideRight.svg";
+
+    btn.setAttribute("src", src);
   } else {
     div.classList.contains("close-toggle") &&
       div.classList.remove("close-toggle");
 
-    btn.setAttribute("src", "./src/assets/svgs/ArrowSideLeft.svg");
+    const src = bool
+      ? "../../src/assets/svgs/ArrowSideLeft.svg"
+      : "./src/assets/svgs/ArrowSideLeft.svg";
+
+    btn.setAttribute("src", src);
   }
 };
 

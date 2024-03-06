@@ -10,6 +10,10 @@ p {
   margin: 0 !important;
 }
 
+input {
+  outline: none !important ;
+}
+
 .default {
   color: rgba(0, 0, 0, 0.5);
   text-decoration: none;
@@ -91,6 +95,7 @@ p {
 
 .w-90 {
   width: 90%;
+  max-width: 1240px;
 }
 
 .w-full {
@@ -117,5 +122,17 @@ p {
 }
 
 .p-sm {
-  padding: 16px 4px;
+  padding: 16px;
+}
+
+.no-padding {
+  padding: 0px !important;
+}
+
+.px-12 {
+  padding: 0 12px;
+}
+
+.no-border {
+  border: none;
 }

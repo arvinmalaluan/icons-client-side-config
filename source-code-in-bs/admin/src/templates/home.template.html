@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../../src/assets/style.css" />
+
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="../../../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <script src="../../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <div class="main-frame d-flex">
+      <!-- Side Navigation -->
+      <div class="position-relative" id="side-bar">
+        <div class="toggle-side-pos">
+          <img
+            src="../../src/assets/svgs/ArrowSideRight.svg"
+            class="svg-icon-size d-none"
+            alt=""
+            id="toggle-side-right"
+          />
+        </div>
+
+        <div class="toggle-side-pos">
+          <img
+            src="../../src/assets/svgs/ArrowSideLeft.svg"
+            class="svg-icon-size"
+            alt=""
+            id="toggle-side-left"
+          />
+        </div>
+
+        <div class="w-260 border-r h-100 px-8 py-4">
+          <div>
+            <img
+              src="../../src/assets/images/logo.png"
+              class="logo-styles"
+              alt=""
+            />
+          </div>
+
+          <div class="d-flex gap-4 row mt-4">
+            <div>
+              <p class="m-0 border-b text-xs mb-1">Dashboard</p>
+              <div class="d-flex row">
+                <a href="" class="active">Dashboard</a>
+              </div>
+            </div>
+
+            <div>
+              <p class="m-0 border-b text-xs mb-1">Manage</p>
+              <div class="d-flex row">
+                <a href="" class="default">Users</a>
+                <a href="" class="default">Articles</a>
+                <a href="" class="default">Programs</a>
+                <a href="" class="default">Queries</a>
+              </div>
+            </div>
+
+            <div>
+              <p class="m-0 border-b text-xs mb-1">Interact</p>
+              <div class="d-flex row">
+                <a href="" class="default">Messenger</a>
+                <a href="" class="default">Community</a>
+              </div>
+            </div>
+          </div>
+          <div></div>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="w-100 overflow-y-scroll">
+        <div class="m-auto w-90 px-8">
+          <!-- Heading -->
+          <div class="w-100 mt-4">
+            <p class="h2">Hi, welcome back</p>
+            <p class="text-sm text-muted">
+              Welcome, Admin! Your Dashboard for Decisive Insights and
+              Effortless Control is now ready.
+            </p>
+
+            <div class="d-flex justify-content-between mt-4 border-b">
+              <div>
+                <button class="button-tab border-r">Overview</button>
+                <button class="button-tab border-r">Users</button>
+                <button class="button-tab border-r">Demographics</button>
+                <button class="button-tab">More</button>
+              </div>
+
+              <div>
+                <button class="button-tab border-r">Save Report</button
+                ><button class="button-tab">Print Report</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Charts -->
+          <div class="container-fluid gx-0 mt-4">
+            <div class="row gx-3 gy-3">
+              <div class="col-7">
+                <div
+                  class="border rounded d-flex justify-content-between align-items-start p-sm h-100"
+                >
+                  <div>
+                    <p class="h5">Website Audience Metrics</p>
+                    <p class="text-xs text-muted">
+                      Audience to which the users belonged while on the current
+                      date range.
+                    </p>
+                  </div>
+
+                  <div class="btn-group" role="group">
+                    <button
+                      type="button"
+                      class="px-3 py-1 text-xs border rounded-left"
+                    >
+                      Left
+                    </button>
+                    <button type="button" class="px-3 py-1 text-xs border">
+                      Middle
+                    </button>
+                    <button
+                      type="button"
+                      class="px-3 py-1 text-xs border rounded-right"
+                    >
+                      Right
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-5">
+                <div class="row gx-3 h-100">
+                  <div class="col-6">
+                    <div class="border rounded h-100 p-sm">
+                      <p class="text-muted text-xs">Bounce Rate</p>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="border rounded h-100 p-sm">
+                      <p class="text-muted text-xs">Total Users</p>
+                    </div>
+                  </div>
+                  <div class="col-12 mt-3">
+                    <div class="border rounded h-100 p-sm">
+                      <p class="text-muted text-xs">All Sessions</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-5">
+                <div class="border rounded p-sm">
+                  <p class="h5">Page views by title page</p>
+                  <p class="text-xs text-muted">
+                    This report is based on 100% of sessions.
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-7">
+                <div class="border rounded p-sm">
+                  <p class="h5">Demographics of User Sessions</p>
+                  <p class="text-xs text-muted">
+                    Exploring the Diversity of User Sessions through Demographic
+                    Insights in this Chart.
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-5">
+                <div class="row gx-0">
+                  <div class="col-12">
+                    <div class="p-sm border rounded">
+                      <p class="h6">Acquisition</p>
+                      <p class="text-muted text-xs">
+                        Tells you where your visitors originated from, such as
+                        search engines, social networks or website referrals.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-12 mt-3">
+                    <div class="p-sm border rounded">
+                      <p class="h6">Sessions</p>
+                      <p class="text-xs text-muted">
+                        Tells you where your visitors originated from, such as
+                        search engines, social networks or website referrals.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-7">
+                <div class="border rounded p-sm h-100">
+                  <p class="h5">Most Active Users</p>
+                  <p class="text-xs text-muted">
+                    Exploring the Diversity of User Sessions through Demographic
+                    Insights in this Chart.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../../src/utils/onClick.js"></script>
+  </body>
+</html>
