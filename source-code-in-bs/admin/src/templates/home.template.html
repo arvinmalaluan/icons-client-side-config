@@ -13,6 +13,11 @@
       href="../../../node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
     <script src="../../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="../../../node_modules/highcharts/highcharts.js"></script>
+    <script src="../../../node_modules/highcharts/modules/exporting.js"></script>
+    <script src="../../../node_modules/highcharts/modules/accessibility.js"></script>
+    <script src="../../../node_modules/highcharts/modules/variwide.js"></script>
   </head>
   <body>
     <div class="main-frame d-flex">
@@ -107,54 +112,81 @@
 
           <!-- Charts -->
           <div class="container-fluid gx-0 mt-4">
-            <div class="row gx-3 gy-3">
+            <div class="row gx-3 gy-3 overflow-hidden">
               <div class="col-7">
-                <div
-                  class="border rounded d-flex justify-content-between align-items-start p-sm h-100"
-                >
-                  <div>
-                    <p class="h5">Website Audience Metrics</p>
-                    <p class="text-xs text-muted">
-                      Audience to which the users belonged while on the current
-                      date range.
-                    </p>
+                <div class="border h-100 rounded d-flex flex-column">
+                  <div
+                    class="d-flex justify-content-between align-items-start p-sm"
+                  >
+                    <div>
+                      <p class="h5">Website Audience Metrics</p>
+                      <p class="text-xs text-muted">
+                        Audience to which the users belonged while on the
+                        current date range.
+                      </p>
+                    </div>
+
+                    <div class="btn-group" role="group">
+                      <button
+                        type="button"
+                        class="px-3 py-1 text-xs border rounded-left"
+                      >
+                        Left
+                      </button>
+                      <button type="button" class="px-3 py-1 text-xs border">
+                        Middle
+                      </button>
+                      <button
+                        type="button"
+                        class="px-3 py-1 text-xs border rounded-right"
+                      >
+                        Right
+                      </button>
+                    </div>
                   </div>
 
-                  <div class="btn-group" role="group">
-                    <button
-                      type="button"
-                      class="px-3 py-1 text-xs border rounded-left"
-                    >
-                      Left
-                    </button>
-                    <button type="button" class="px-3 py-1 text-xs border">
-                      Middle
-                    </button>
-                    <button
-                      type="button"
-                      class="px-3 py-1 text-xs border rounded-right"
-                    >
-                      Right
-                    </button>
-                  </div>
+                  <div
+                    class="h-100"
+                    style="min-height: 250px"
+                    id="chart-container"
+                  ></div>
                 </div>
               </div>
 
               <div class="col-5">
                 <div class="row gx-3 h-100">
-                  <div class="col-6">
-                    <div class="border rounded h-100 p-sm">
-                      <p class="text-muted text-xs">Bounce Rate</p>
+                  <div class="col-6 h-full">
+                    <div class="border rounded h-100 d-flex flex-column">
+                      <div class="p-sm">
+                        <p class="text-muted text-xs">Bounce Rate</p>
+                        <p class="h5">33%</p>
+                      </div>
+
+                      <div class="h-100">
+                        <div class="h--42" id="bounce-rate-container"></div>
+                      </div>
                     </div>
                   </div>
-                  <div class="col-6">
-                    <div class="border rounded h-100 p-sm">
-                      <p class="text-muted text-xs">Total Users</p>
+
+                  <div class="col-6 h-full">
+                    <div class="border rounded h-100">
+                      <div class="p-sm">
+                        <p class="text-muted text-xs">Total Users</p>
+                        <p class="h5">50k</p>
+                      </div>
+
+                      <div class="h--42" id="total-users-container"></div>
                     </div>
                   </div>
-                  <div class="col-12 mt-3">
-                    <div class="border rounded h-100 p-sm">
-                      <p class="text-muted text-xs">All Sessions</p>
+
+                  <div class="col-12 mt-3 h-full">
+                    <div class="border rounded h-100 position-relative">
+                      <div class="p-sm">
+                        <p class="text-muted text-xs">All Sessions</p>
+                        <p class="h5">50k</p>
+                      </div>
+
+                      <div class="h--42" id="all-sessions-container"></div>
                     </div>
                   </div>
                 </div>
@@ -218,5 +250,9 @@
     </div>
 
     <script src="../../src/utils/onClick.js"></script>
+    <script src="../../src/utils/charts/aud-met.js"></script>
+    <script src="../../src/utils/charts/bounce-rate.js"></script>
+    <script src="../../src/utils/charts/total-users.js"></script>
+    <script src="../../src/utils/charts/all-sessions.js"></script>
   </body>
 </html>
