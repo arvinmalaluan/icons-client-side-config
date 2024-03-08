@@ -1,7 +1,18 @@
 {
   "dependencies": {
     "bootstrap": "^5.3.3",
+    "datatables.net-dt": "^2.0.1",
     "highcharts": "^11.3.0",
     "jquery": "^3.7.1"
-  }
+  },
+  "name": "source-code-in-bs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }

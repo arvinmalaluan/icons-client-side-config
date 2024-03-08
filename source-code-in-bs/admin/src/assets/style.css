@@ -43,8 +43,16 @@ input {
   border-right: 1px solid whitesmoke !important;
 }
 
+.border-t {
+  border-top: 1px solid gainsboro !important;
+}
+
 .border-b {
   border-bottom: 1px solid whitesmoke;
+}
+
+.border-b-g {
+  border-bottom: 1px solid gainsboro;
 }
 
 .border-l {
@@ -135,4 +143,161 @@ input {
 
 .no-border {
   border: none;
+}
+
+.h-300 {
+  height: 300px;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 !important;
+}
+
+.pagination > li {
+  height: 32px;
+  width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.page-number-active {
+  background: #292929;
+  color: white;
+}
+
+.outline-none {
+  outline: none;
+}
+
+.font-500 {
+  font-weight: 600;
+}
+
+.font-18 {
+  font-size: 18px;
+}
+
+ul {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.bg-gray-50 {
+  background-color: whitesmoke !important;
+}
+
+.w-40 {
+  width: 40px;
+}
+
+.h-40 {
+  height: 40px;
+}
+
+.border-full {
+  border-radius: 50%;
+}
+
+.h--79 {
+  height: calc(100% - 87px);
+}
+
+.pl-4 {
+  padding-left: 16px;
+}
+
+.pr-2 {
+  padding-right: 8px;
+}
+
+.dp {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+}
+
+.h-4 {
+  height: 24px;
+}
+
+.w-4 {
+  width: 24px;
+}
+
+.icon-size {
+  height: 20px;
+  width: 20px;
+}
+
+.body-msg {
+  height: calc(100% - 101px);
+}
+
+.msg-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.msg-me {
+  display: flex;
+  justify-content: end;
+}
+
+.msg-you {
+  display: flex;
+  justify-content: start;
+}
+
+.me {
+  background-color: #0a3172;
+  color: white;
+  padding: 6px 16px;
+  font-size: 14px;
+  border-radius: 50px 50px 0 50px;
+}
+
+.you {
+  background-color: whitesmoke;
+  padding: 6px 16px;
+  font-size: 14px;
+  border-radius: 50px 50px 50px 0;
+}
+
+.mb-12 {
+  margin-bottom: 12px;
+}
+
+.stick-2-top {
+  position: sticky;
+  top: 40px;
+}
+
+.mb-8 {
+  margin-bottom: 24px;
+}
+
+.preview {
+  background: rgba(245, 245, 245, 0.5);
+  padding: 16px 24px 16px;
+  border-left: 5px solid gainsboro;
+  margin-left: 16px;
+}
+
+.pr-2 {
+  padding-right: 12px !important;
 }
