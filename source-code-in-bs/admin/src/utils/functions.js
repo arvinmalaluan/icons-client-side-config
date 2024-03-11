@@ -3345,6 +3345,66 @@ const lastPath = currentPath[currentPath.length - 1];
 let currentPage = 1;
 let rowsPerPage = 25;
 
+function tableSearch() {
+  let input, filter, table, tr, td, txtValue;
+
+  // Initialization of variables
+  input = document.querySelector("#search-user");
+  filter = input.value.toUpperCase();
+  table = document.querySelector("#table-user");
+  tr = table.getElementsByTagName("tr");
+
+  for (let i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td");
+
+    for (let j = 0; j < td.length; j++) {
+      // Access each specific td element in the loop
+      txtValue = td[j].textContent || td[j].innerText;
+
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+        break; // Break out of the inner loop once a match is found
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+
+function defineDropdownContent(dropdownMenuContent) {
+  // Add dropdown menu items here (replace with your desired actions)
+  const dropdownItem1 = document.createElement("a");
+  dropdownItem1.classList.add("dropdown-item");
+  dropdownItem1.href = "#";
+
+  const dropdownItem2 = document.createElement("a");
+  dropdownItem2.classList.add("dropdown-item");
+  dropdownItem2.href = "#";
+
+  if (lastPath.includes("users.template.html")) {
+    dropdownItem1.textContent = "Edit User";
+    dropdownItem2.textContent = "Delete User";
+  }
+
+  if (lastPath.includes("articles.template.html")) {
+    dropdownItem1.textContent = "Edit Articles";
+    dropdownItem2.textContent = "Delete Articles";
+  }
+
+  if (lastPath.includes("programs.template.html")) {
+    dropdownItem1.textContent = "Edit Programs";
+    dropdownItem2.textContent = "Delete Programs";
+  }
+
+  if (lastPath.includes("queries.template.html")) {
+    dropdownItem1.textContent = "View Query";
+    dropdownItem2.textContent = "Delete Query";
+  }
+
+  dropdownMenuContent.appendChild(dropdownItem1);
+  dropdownMenuContent.appendChild(dropdownItem2);
+}
+
 function populateLogic(data) {
   const tbody = document.getElementById("users-tbl-body");
   tbody.innerHTML = "";
@@ -3363,19 +3423,39 @@ function populateLogic(data) {
     });
 
     const buttonCell = document.createElement("td");
-    const button = document.createElement("button");
-    button.textContent = "More";
-    button.classList.add(
-      "text-xs",
-      "border",
-      "rounded",
-      "bg-white",
-      "px-2",
-      "py-1"
-    );
-    lastPath !== "community.template.html" && buttonCell.appendChild(button);
-    lastPath !== "community.template.html" && row.appendChild(buttonCell);
+    buttonCell.className = "text-center";
 
+    const button = document.createElement("button");
+    button.classList.add("text-xs", "border", "rounded", "bg-white");
+    button.setAttribute("data-bs-toggle", "dropdown");
+    button.setAttribute("id", `button_${i}`);
+
+    // Create img element
+    const img = document.createElement("img");
+    img.src = "../assets/svgs/More.svg";
+    img.className = "h-4 w-4 p-1";
+    img.alt = "";
+
+    button.appendChild(img);
+
+    const dropdownMenu = document.createElement("div");
+    dropdownMenu.classList.add("dropdown");
+
+    const dropdownMenuContent = document.createElement("div");
+    dropdownMenuContent.classList.add("dropdown-menu");
+    dropdownMenuContent.setAttribute("aria-labelledby", `button_${i}`); // Link to the current button's ID
+
+    defineDropdownContent(dropdownMenuContent);
+
+    dropdownMenu.appendChild(dropdownMenuContent);
+    buttonCell.appendChild(button); // Append button to cell
+    buttonCell.appendChild(dropdownMenu); // Also append dropdown to cell (acts as the button)
+
+    button.onclick = function () {
+      dropdownMenu.classList.toggle("show"); // Toggle visibility of the current dropdown
+    };
+
+    row.appendChild(buttonCell);
     tbody.appendChild(row);
   }
 }
@@ -3424,5 +3504,5 @@ function showPage(page) {
 }
 
 // Initial pagination and table population
-updatePagination();
-populateTableBody();
+lastPath !== "messenger.template.html" && updatePagination();
+lastPath !== "messenger.template.html" && populateTableBody();

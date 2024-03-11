@@ -84,7 +84,7 @@
         <div class="m-auto w-90 px-8">
           <!-- Heading -->
           <div class="w-100 mt-4">
-            <p class="h2">Manage Users</p>
+            <p class="h2 color-pri">Manage Users</p>
             <p class="text-sm text-muted">
               This page will give you the ability to manage your users easier.
             </p>
@@ -101,19 +101,32 @@
                   onkeyup="tableSearch()"
                   id="search-user"
                 />
-                <button class="border px-3 py-1 text-sm rounded">
+                <button class="border px-3 py-1 text-xs rounded">
                   Category
                 </button>
               </div>
 
-              <div
-                class="w-100 d-flex gap-2 align-items-center justify-content-end"
-              >
-                <button class="border px-3 py-1 text-sm rounded">
-                  Export PDF
+              <div class="w-100 d-flex align-items-center justify-content-end">
+                <button class="border px-2 py-1 text-xs rounded-left">
+                  <img
+                    src="../assets/svgs/AddUser.svg"
+                    style="height: 16px; width: 16px"
+                    alt=""
+                  />
                 </button>
-                <button class="border px-3 py-1 text-sm rounded">
-                  Print PDF
+                <button class="border px-2 py-1 text-xs">
+                  <img
+                    src="../assets/svgs/Download.svg"
+                    style="height: 16px; width: 16px"
+                    alt=""
+                  />
+                </button>
+                <button class="border px-2 py-1 text-xs rounded-right">
+                  <img
+                    src="../assets/svgs/Print.svg"
+                    style="height: 16px; width: 16px"
+                    alt=""
+                  />
                 </button>
               </div>
             </div>
@@ -127,12 +140,12 @@
               >
                 <thead>
                   <tr>
-                    <th class="th-sm">Organization</th>
-                    <th class="th-sm">Category</th>
-                    <th class="th-sm">Email</th>
-                    <th class="th-sm">Last logged in</th>
-                    <th class="th-sm">Status</th>
-                    <th class="th-sm">Action</th>
+                    <th class="th-sm text-xs">Organization</th>
+                    <th class="th-sm text-xs">Category</th>
+                    <th class="th-sm text-xs">Email</th>
+                    <th class="th-sm text-xs">Last logged in</th>
+                    <th class="th-sm text-xs">Status</th>
+                    <th class="th-sm text-center text-xs">Action</th>
                   </tr>
                 </thead>
                 <tbody id="users-tbl-body">
@@ -181,35 +194,6 @@
     </div>
 
     <script src="../../src/utils/onClick.js"></script>
-
-    <script type="application/javascript">
-      function tableSearch() {
-        let input, filter, table, tr, td, txtValue;
-
-        // Initialization of variables
-        input = document.querySelector("#search-user");
-        filter = input.value.toUpperCase();
-        table = document.querySelector("#table-user");
-        tr = table.getElementsByTagName("tr");
-
-        for (let i = 0; i < tr.length; i++) {
-          td = tr[i].getElementsByTagName("td");
-
-          for (let j = 0; j < td.length; j++) {
-            // Access each specific td element in the loop
-            txtValue = td[j].textContent || td[j].innerText;
-
-            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-              tr[i].style.display = "";
-              break; // Break out of the inner loop once a match is found
-            } else {
-              tr[i].style.display = "none";
-            }
-          }
-        }
-      }
-    </script>
-
     <script src="../../src/utils/functions.js"></script>
   </body>
 </html>

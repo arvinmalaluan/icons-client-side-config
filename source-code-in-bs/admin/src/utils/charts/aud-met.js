@@ -2,6 +2,7 @@ Highcharts.chart("chart-container", {
   chart: {
     type: "spline",
     margin: [15, 0, 0, 0],
+    backgroundColor: "transparent",
     credits: {
       enabled: false, // Set enabled to false to remove credits
     },

@@ -17,15 +17,17 @@ input {
 .default {
   color: rgba(0, 0, 0, 0.5);
   text-decoration: none;
-  padding: 2px 8px;
+  padding: 4px 8px;
   font-size: 14px;
 }
 
 .active {
-  color: #0a3172;
+  background-color: #fda302;
+  border-radius: 4px;
+  color: #fff;
   font-weight: 600;
   text-decoration: none;
-  padding: 2px 8px;
+  padding: 4px 8px;
   font-size: 14px;
 }
 
@@ -40,7 +42,7 @@ input {
 }
 
 .border-r {
-  border-right: 1px solid whitesmoke !important;
+  border-right: 1px solid gainsboro !important;
 }
 
 .border-t {
@@ -48,7 +50,7 @@ input {
 }
 
 .border-b {
-  border-bottom: 1px solid whitesmoke;
+  border-bottom: 1px solid gainsboro;
 }
 
 .border-b-g {
@@ -56,7 +58,7 @@ input {
 }
 
 .border-l {
-  border-left: 1px solid whitesmoke;
+  border-left: 1px solid gainsboro;
 }
 
 .text-xs {
@@ -68,7 +70,7 @@ input {
 }
 
 .logo-styles {
-  height: 48px;
+  height: 24px;
   width: auto;
 }
 
@@ -285,6 +287,26 @@ ul {
 .stick-2-top {
   position: sticky;
   top: 40px;
+}
+
+.bg-pri {
+  background-color: #0a3172 !important;
+}
+
+.bg-sec {
+  background-color: #fda302 !important;
+}
+
+.bg-pri-300 {
+  background: rgba(10, 49, 114, 0.1) !important;
+}
+
+.color-pri {
+  color: #0a3172 !important;
+}
+
+.color-sec {
+  color: #fda302 !important;
 }
 
 .mb-8 {
