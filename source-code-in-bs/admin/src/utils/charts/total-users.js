@@ -3,7 +3,6 @@ Highcharts.chart("total-users-container", {
     type: "variwide",
     margin: [0, 0, 0, 0],
     height: null,
-    reflow: false,
     renderTo: document.getElementById("total-users-container").offsetHeight,
   },
 

@@ -327,3 +327,24 @@ ul {
 .h--42 {
   height: 100px;
 }
+
+.table-striped {
+  --bs-table-striped-bg: rgba(10, 49, 114, 0.1) !important;
+}
+
+.icon-sz-16 {
+  height: 16px;
+  width: 16px;
+}
+
+.border-l-sec {
+  border-left: 1px solid #fda302;
+}
+
+.border-r-sec {
+  border-right: 1px solid #fda302;
+}
+
+.border-sec {
+  border: 1px solid #fda302;
+}

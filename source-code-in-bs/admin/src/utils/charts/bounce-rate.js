@@ -3089,7 +3089,6 @@ Highcharts.chart("bounce-rate-container", {
     zoomType: "x",
     margin: [0, 0, 0, 0],
     height: null,
-    reflow: false,
     renderTo: document.getElementById("bounce-rate-container").offsetHeight,
   },
   title: {

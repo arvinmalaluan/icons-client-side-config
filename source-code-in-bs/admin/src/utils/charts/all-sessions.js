@@ -3,7 +3,6 @@ Highcharts.chart("all-sessions-container", {
     type: "column",
     margin: [0, 0, 0, 0],
     height: null,
-    reflow: false,
     renderTo: document.getElementById("all-sessions-container").offsetHeight,
   },
   title: {
