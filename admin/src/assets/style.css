@@ -377,3 +377,32 @@ ul {
 input[type="checkbox"] {
   accent-color: #0a3172;
 }
+
+.modal-custom-body-config {
+  background: rgba(212, 37, 30, 0.1);
+  height: 94px;
+  width: 94px;
+  border-radius: 50%;
+}
+
+.bg-new-warning {
+  background: #d4251e;
+}
+
+.text-new-warning {
+  color: #d4251e;
+}
+
+.border-new-warning {
+  border: 1px solid rgba(212, 37, 30, 0.5);
+}
+
+.image-custom-config {
+  height: 200px;
+  width: 100%;
+  padding: 70px;
+  border: 1px dashed gainsboro;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

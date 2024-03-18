@@ -99,14 +99,18 @@
                   id="search-user"
                 />
                 <button
-                  class="border px-3 py-1 text-sm rounded bg-sec text-white"
+                  class="border px-3 py-1 text-sm rounded bg-pri text-white"
                 >
                   Category
                 </button>
               </div>
 
               <div class="w-100 d-flex align-items-center justify-content-end">
-                <button class="border px-2 py-1 text-xs rounded-left">
+                <button
+                  class="border px-2 py-1 text-xs rounded-left"
+                  data-bs-toggle="modal"
+                  data-bs-target="#add_new_users"
+                >
                   <img
                     src="../assets/svgs/AddUser.svg"
                     class="icon-sz-16"
@@ -139,12 +143,12 @@
               >
                 <thead>
                   <tr>
-                    <th class="th-sm">
+                    <th class="th-sm text-center">
                       <input
                         class="form-check-input"
                         type="checkbox"
                         value=""
-                        id="flexCheckDefault"
+                        id="select-all-checkbox"
                       />
                     </th>
                     <th class="th-sm text-xs">Organization</th>
@@ -194,6 +198,86 @@
                 <!-- Pagination controls will be added dynamically -->
                 <ul id="pagination" class="pagination gap-1"></ul>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="add_new_users" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              Create New User
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="message-text" class="col-form-label">Category:</label>
+              <select class="form-select" id="category-create-new-user">
+                <option value="0" selected disabled>
+                  Open this select menu
+                </option>
+                <option value="2">Startup</option>
+                <option value="3">Partner</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="message-text" class="col-form-label">Email:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="email-create-new-user"
+              />
+            </div>
+
+            <div class="mb-4">
+              <p class="text-sm text-muted">
+                <i
+                  ><b>Note: </b>password, by default, is set to
+                  "icons_default_password"</i
+                >
+              </p>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              id="cancel"
+              class="no-border px-3 py-2 rounded-xs"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <button
+              id="create-user"
+              class="no-border py-2 rounded-xs bg-pri text-white"
+              style="width: 115px"
+            >
+              Create User
+            </button>
+            <div class="d-none" id="creating-user">
+              <button
+                disabled
+                class="no-border py-2 rounded-xs d-flex gap-2 justify-content-center align-items-center"
+                style="width: 115px"
+              >
+                <span>Creating</span>
+                <div
+                  class="spinner-border"
+                  style="height: 16px; width: 16px"
+                  role="status"
+                >
+                  <span class="sr-only d-none">Loading...</span>
+                </div>
+              </button>
             </div>
           </div>
         </div>

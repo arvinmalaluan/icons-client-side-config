@@ -101,22 +101,35 @@
                         onkeyup="tableSearch()"
                         id="search-user"
                       />
-                      <button
-                        class="border px-3 py-1 text-sm rounded"
-                        style="flex-shrink: 0"
-                      >
-                        New Post
-                      </button>
                     </div>
 
                     <div
-                      class="w-100 d-flex gap-2 align-items-center justify-content-end"
+                      class="w-100 d-flex align-items-center justify-content-end"
                     >
-                      <button class="border px-3 py-1 text-sm rounded">
-                        Export PDF
+                      <button
+                        class="border px-2 py-1 text-xs rounded-left"
+                        data-bs-toggle="modal"
+                        data-bs-target="#add_new_post"
+                      >
+                        <img
+                          src="../assets/svgs/AddFile.svg"
+                          class="icon-sz-16"
+                          alt=""
+                        />
                       </button>
-                      <button class="border px-3 py-1 text-sm rounded">
-                        Print PDF
+                      <button class="border px-2 py-1 text-xs">
+                        <img
+                          src="../assets/svgs/Download.svg"
+                          class="icon-sz-16"
+                          alt=""
+                        />
+                      </button>
+                      <button class="border px-2 py-1 text-xs rounded-right">
+                        <img
+                          src="../assets/svgs/Print.svg"
+                          class="icon-sz-16"
+                          alt=""
+                        />
                       </button>
                     </div>
                   </div>
@@ -135,7 +148,7 @@
                               class="form-check-input"
                               type="checkbox"
                               value=""
-                              id="flexCheckDefault"
+                              id="select-all-checkbox"
                             />
                           </th>
                           <th class="th-sm text-sm pr-2">Title</th>
@@ -285,6 +298,106 @@
               <p class="text-sm">
                 <span class="font-500">Remarks:</span> random value
               </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="add_new_post" tabindex="-1">
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              Create New Post
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label
+                for="message-text"
+                class="col-form-label text-sm text-muted"
+                >Title:</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="title-create-new-article"
+              />
+            </div>
+
+            <div class="mb-3">
+              <label
+                for="message-text"
+                class="col-form-label text-sm text-muted"
+                >Content:</label
+              >
+              <textarea
+                class="form-control"
+                id="content-create-new-article"
+                rows="10"
+                style="resize: none"
+              ></textarea>
+            </div>
+
+            <p class="h6 text-xs text-muted pt-3"><i>Optional **</i></p>
+            <div class="mb-3">
+              <p class="mb-2 text-muted text-sm">Image:</p>
+              <label
+                for="images-create-new-article"
+                class="rounded-xs image-custom-config"
+              >
+                <img
+                  src="../assets/svgs/AddImage.svg"
+                  style="height: 32px; width: 36px"
+                  alt="hello"
+                />
+              </label>
+              <input
+                type="file"
+                class="form-control"
+                hidden
+                id="images-create-new-article"
+              />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              id="cancel"
+              class="no-border px-3 py-2 rounded-xs"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <button
+              id="create-article"
+              class="no-border py-2 rounded-xs bg-pri text-white"
+              style="width: 115px"
+            >
+              Create Article
+            </button>
+            <div class="d-none" id="creating-article">
+              <button
+                disabled
+                class="no-border py-2 rounded-xs d-flex gap-2 justify-content-center align-items-center"
+                style="width: 115px"
+              >
+                <span>Creating</span>
+                <div
+                  class="spinner-border"
+                  style="height: 16px; width: 16px"
+                  role="status"
+                >
+                  <span class="sr-only d-none">Loading...</span>
+                </div>
+              </button>
             </div>
           </div>
         </div>

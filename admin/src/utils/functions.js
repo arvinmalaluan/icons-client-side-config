@@ -3417,6 +3417,8 @@ function populateLogic(data) {
     const row = document.createElement("tr");
     const cbc = document.createElement("td");
 
+    cbc.classList.add("text-center");
+
     const checkbox = document.createElement("input");
     checkbox.setAttribute("class", "form-check-input");
     checkbox.setAttribute("type", "checkbox");

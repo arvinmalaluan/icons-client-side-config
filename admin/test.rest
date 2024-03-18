@@ -5,3 +5,14 @@ Content-Type: application/json
     "email": "admin@administrator.com",
     "pass": "admin"
 }
+
+####
+
+POST http://localhost:3000/api/v1/https/auth/signup
+Content-Type: application/json
+
+{
+    "email": "test@testing.com",
+    "pass": "test",
+    "role": "2"
+}

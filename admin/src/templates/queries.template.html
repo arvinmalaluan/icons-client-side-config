@@ -98,19 +98,27 @@
                   onkeyup="tableSearch()"
                   id="search-user"
                 />
-                <button class="border px-3 py-1 text-sm rounded">
+                <button
+                  class="border px-3 py-1 bg-pri text-white text-sm rounded"
+                >
                   Category
                 </button>
               </div>
 
-              <div
-                class="w-100 d-flex gap-2 align-items-center justify-content-end"
-              >
-                <button class="border px-3 py-1 text-sm rounded">
-                  Export PDF
+              <div class="w-100 d-flex align-items-center justify-content-end">
+                <button class="border rounded-left px-2 py-1 text-xs">
+                  <img
+                    src="../assets/svgs/Download.svg"
+                    class="icon-sz-16"
+                    alt=""
+                  />
                 </button>
-                <button class="border px-3 py-1 text-sm rounded">
-                  Print PDF
+                <button class="border px-2 py-1 text-xs rounded-right">
+                  <img
+                    src="../assets/svgs/Print.svg"
+                    class="icon-sz-16"
+                    alt=""
+                  />
                 </button>
               </div>
             </div>
@@ -124,20 +132,20 @@
               >
                 <thead>
                   <tr>
-                    <th class="th-sm">
+                    <th class="th-sm text-center">
                       <input
                         class="form-check-input"
                         type="checkbox"
                         value=""
-                        id="flexCheckDefault"
+                        id="select-all-checkbox"
                       />
                     </th>
-                    <th class="th-sm">Sender</th>
-                    <th class="th-sm">Subject</th>
-                    <th class="th-sm">Content</th>
-                    <th class="th-sm">Status</th>
-                    <th class="th-sm">Date Received</th>
-                    <th class="th-sm">Action</th>
+                    <th class="th-sm text-xs">Sender</th>
+                    <th class="th-sm text-xs">Subject</th>
+                    <th class="th-sm text-xs">Content</th>
+                    <th class="th-sm text-xs">Status</th>
+                    <th class="th-sm text-xs">Date Received</th>
+                    <th class="th-sm text-xs text-center">Action</th>
                   </tr>
                 </thead>
                 <tbody id="users-tbl-body">
