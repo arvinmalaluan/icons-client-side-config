@@ -16,3 +16,25 @@ Content-Type: application/json
     "pass": "test",
     "role": "2"
 }
+
+####
+POST http://localhost:3000/api/v1/https/home-content/
+Content-Type: application/json
+
+{
+    "type": "article",
+    "author": "me",
+    "content": "{\"title\":\"Welcome Aboard\",\"content\":\"adfa\"}",
+    "account_fkid": 1
+}
+
+###
+POST http://localhost:3000/api/v1/https/community/post
+Content-Type: application/json
+
+{
+    "title": "Arrogance vs. Confidence",
+    "content": "hello",
+    "account_fkid": "2",
+    "profile_fkid": "1"
+}

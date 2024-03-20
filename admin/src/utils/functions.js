@@ -3371,38 +3371,101 @@ function tableSearch() {
   }
 }
 
-function defineDropdownContent(dropdownMenuContent) {
-  // Add dropdown menu items here (replace with your desired actions)
-  const dropdownItem1 = document.createElement("a");
-  dropdownItem1.classList.add("dropdown-item");
-  dropdownItem1.href = "#";
+function createDdownItem() {
+  const dropdownItem = document.createElement("a");
+  dropdownItem.className = "dropdown-item text-sm";
+  dropdownItem.href = "#";
 
-  const dropdownItem2 = document.createElement("a");
-  dropdownItem2.classList.add("dropdown-item");
-  dropdownItem2.href = "#";
+  return dropdownItem;
+}
 
+function createDdownItemDanger(index) {
+  const myModal = new bootstrap.Modal("#delete_modal");
+
+  const dropdownItem = document.createElement("a");
+  dropdownItem.className = "dropdown-item text-sm text-danger my-custom-link";
+  dropdownItem.href = "#";
+
+  dropdownItem.addEventListener("click", (e) => {
+    const url = new URL(window.location); // Get current URL object
+    const params = url.searchParams; // Access URL search params
+
+    // Add or modify a parameter
+    params.set("id", index);
+
+    // Update the URL in history without reload
+    window.history.pushState({}, "", url.toString());
+
+    myModal.show();
+  });
+
+  return dropdownItem;
+}
+
+function defineDropdownContent(dropdownMenuContent, index) {
   if (lastPath.includes("users.template.html")) {
+    const dropdownItem1 = createDdownItem();
+    const dropdownItem2 = createDdownItemDanger(index);
+
     dropdownItem1.textContent = "Edit User";
     dropdownItem2.textContent = "Delete User";
+
+    dropdownMenuContent.appendChild(dropdownItem1);
+    dropdownMenuContent.appendChild(dropdownItem2);
   }
 
   if (lastPath.includes("articles.template.html")) {
+    const dropdownItem1 = createDdownItem();
+    const dropdownItem2 = createDdownItemDanger(index);
+
     dropdownItem1.textContent = "Edit Articles";
     dropdownItem2.textContent = "Delete Articles";
+
+    dropdownMenuContent.appendChild(dropdownItem1);
+    dropdownMenuContent.appendChild(dropdownItem2);
   }
 
   if (lastPath.includes("programs.template.html")) {
+    const dropdownItem1 = createDdownItem();
+    const dropdownItem2 = createDdownItemDanger(index);
+
     dropdownItem1.textContent = "Edit Programs";
     dropdownItem2.textContent = "Delete Programs";
+
+    dropdownMenuContent.appendChild(dropdownItem1);
+    dropdownMenuContent.appendChild(dropdownItem2);
   }
 
   if (lastPath.includes("queries.template.html")) {
+    const dropdownItem1 = createDdownItem();
+    const dropdownItem2 = createDdownItem();
+    const dropdownItem3 = createDdownItem();
+    const dropdownItem4 = createDdownItemDanger(index);
+
     dropdownItem1.textContent = "View Query";
-    dropdownItem2.textContent = "Delete Query";
+    dropdownItem2.textContent = "Reply";
+    dropdownItem3.textContent = "Mark as unread";
+    dropdownItem4.textContent = "Delete Query";
+
+    dropdownMenuContent.appendChild(dropdownItem1);
+    dropdownMenuContent.appendChild(dropdownItem2);
+    dropdownMenuContent.appendChild(dropdownItem3);
+    dropdownMenuContent.appendChild(dropdownItem4);
   }
 
-  dropdownMenuContent.appendChild(dropdownItem1);
-  dropdownMenuContent.appendChild(dropdownItem2);
+  if (lastPath.includes("community.template.html")) {
+    const dropdownItem1 = createDdownItem();
+    const dropdownItem2 = createDdownItem();
+    const dropdownItem3 = createDdownItemDanger(index);
+
+    dropdownItem1.textContent = "View Post";
+    dropdownItem2.textContent = "Edit Post";
+    dropdownItem3.textContent = "Delete Post";
+
+    dropdownMenuContent.appendChild(dropdownItem1);
+    dropdownMenuContent.appendChild(dropdownItem2);
+    dropdownMenuContent.appendChild(dropdownItem3);
+  }
 }
 
 function populateLogic(data) {
@@ -3454,10 +3517,10 @@ function populateLogic(data) {
     dropdownMenu.classList.add("dropdown");
 
     const dropdownMenuContent = document.createElement("div");
-    dropdownMenuContent.classList.add("dropdown-menu");
+    dropdownMenuContent.className = "dropdown-menu";
     dropdownMenuContent.setAttribute("aria-labelledby", `button_${i}`); // Link to the current button's ID
 
-    defineDropdownContent(dropdownMenuContent);
+    defineDropdownContent(dropdownMenuContent, i);
 
     dropdownMenu.appendChild(dropdownMenuContent);
     buttonCell.appendChild(button); // Append button to cell

@@ -143,7 +143,7 @@
               >
                 <thead>
                   <tr>
-                    <th class="th-sm">
+                    <th class="th-sm text-center">
                       <input
                         class="form-check-input"
                         type="checkbox"
@@ -206,7 +206,7 @@
 
     <!-- Modal -->
     <div class="modal fade" id="add_new_articles" tabindex="-1">
-      <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-dialog modal-lg modal-dialog-scrollable">
         <div class="modal-content">
           <div class="modal-header">
             <h1 class="modal-title fs-5" id="exampleModalLabel">
@@ -217,31 +217,33 @@
               class="btn-close"
               data-bs-dismiss="modal"
               aria-label="Close"
+              id="close-modal"
             ></button>
           </div>
           <div class="modal-body">
             <div class="mb-3">
               <label
-                for="message-text"
+                for="title-create-home-content"
                 class="col-form-label text-sm text-muted"
                 >Title:</label
               >
               <input
                 type="text"
                 class="form-control"
-                id="title-create-new-article"
+                id="title-create-home-content"
               />
             </div>
 
             <div class="mb-3">
               <div class="d-flex justify-content-between align-items-center">
                 <label
-                  for="author-create-new-article"
+                  for="author-create-home-content"
                   class="col-form-label text-sm text-muted"
                   >Author:</label
                 >
                 <button
                   class="no-border bg-white text-xs color-pri text-decoration-underline"
+                  id="set-as-author"
                 >
                   Set CTI as author
                 </button>
@@ -249,19 +251,19 @@
               <input
                 type="text"
                 class="form-control"
-                id="author-create-new-article"
+                id="author-create-home-content"
               />
             </div>
 
             <div class="mb-3">
               <label
-                for="message-text"
+                for="content-create-home-content"
                 class="col-form-label text-sm text-muted"
                 >Content:</label
               >
               <textarea
                 class="form-control"
-                id="content-create-new-article"
+                id="content-create-home-content"
                 rows="10"
                 style="resize: none"
               ></textarea>
@@ -271,7 +273,7 @@
             <div class="mb-3">
               <p class="mb-2 text-muted text-sm">Image:</p>
               <label
-                for="images-create-new-article"
+                for="images-create-home-content"
                 class="rounded-xs image-custom-config"
               >
                 <img
@@ -284,10 +286,17 @@
                 type="file"
                 class="form-control"
                 hidden
-                id="images-create-new-article"
+                multiple
+                id="images-create-home-content"
               />
+
+              <p class="text-muted text-xs mt-3 mb-2">
+                Attached Images: <span><b id="attached-imgs-count">0</b></span>
+              </p>
+              <div id="image-list" class="row"></div>
             </div>
           </div>
+
           <div class="modal-footer">
             <button
               id="cancel"
@@ -296,6 +305,7 @@
             >
               Cancel
             </button>
+
             <button
               id="create-article"
               class="no-border py-2 rounded-xs bg-pri text-white"
@@ -303,6 +313,7 @@
             >
               Create Article
             </button>
+
             <div class="d-none" id="creating-article">
               <button
                 disabled
@@ -324,7 +335,41 @@
       </div>
     </div>
 
+    <!-- Delete Modal -->
+    <div class="modal fade" id="delete_modal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div
+            class="modal-body d-flex flex-column align-items-center w-100 gap-3 mt-4 px-4"
+          >
+            <div
+              class="d-flex justify-content-center align-items-center modal-custom-body-config"
+            >
+              <img src="../assets/svgs/Warning.svg" height="54px" alt="" />
+            </div>
+
+            <div class="mb-4">
+              <p class="h5 text-muted mb-2 text-center">Confirm Action</p>
+              <p class="text-sm text-muted text-center">
+                You are about to perform a delete record function. <br />Are you
+                sure?
+              </p>
+            </div>
+          </div>
+          <div class="d-flex gap-2 justify-content-center pb-3 px-4">
+            <button
+              class="bg-new-warning text-white border px-4 py-2 rounded-xs"
+              id="logout_btn"
+            >
+              Yes, delete record.
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="../../src/utils/onClick.js"></script>
     <script src="../../src/utils/functions.js"></script>
+    <script src="../../src/utils/onChange.js"></script>
   </body>
 </html>

@@ -306,17 +306,16 @@
 
     <!-- Modal -->
     <div class="modal fade" id="add_new_post" tabindex="-1">
-      <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-dialog modal-lg modal-dialog-scrollable">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">
-              Create New Post
-            </h1>
+            <h1 class="modal-title fs-5">Create New Post</h1>
             <button
               type="button"
               class="btn-close"
               data-bs-dismiss="modal"
               aria-label="Close"
+              id="close-modal-community"
             ></button>
           </div>
           <div class="modal-body">
@@ -329,7 +328,7 @@
               <input
                 type="text"
                 class="form-control"
-                id="title-create-new-article"
+                id="title-create-new-post"
               />
             </div>
 
@@ -341,17 +340,17 @@
               >
               <textarea
                 class="form-control"
-                id="content-create-new-article"
+                id="content-create-new-post"
                 rows="10"
                 style="resize: none"
               ></textarea>
             </div>
 
-            <p class="h6 text-xs text-muted pt-3"><i>Optional **</i></p>
+            <p class="h6 text-xs text-muted"><i>Optional **</i></p>
             <div class="mb-3">
               <p class="mb-2 text-muted text-sm">Image:</p>
               <label
-                for="images-create-new-article"
+                for="images-create-home-content"
                 class="rounded-xs image-custom-config"
               >
                 <img
@@ -364,8 +363,14 @@
                 type="file"
                 class="form-control"
                 hidden
-                id="images-create-new-article"
+                multiple
+                id="images-create-home-content"
               />
+
+              <p class="text-muted text-xs mt-3 mb-2">
+                Attached Images: <span><b id="attached-imgs-count">0</b></span>
+              </p>
+              <div id="image-list" class="row"></div>
             </div>
           </div>
           <div class="modal-footer">
@@ -377,13 +382,13 @@
               Cancel
             </button>
             <button
-              id="create-article"
+              id="create-post"
               class="no-border py-2 rounded-xs bg-pri text-white"
               style="width: 115px"
             >
-              Create Article
+              Create Post
             </button>
-            <div class="d-none" id="creating-article">
+            <div class="d-none" id="creating-post">
               <button
                 disabled
                 class="no-border py-2 rounded-xs d-flex gap-2 justify-content-center align-items-center"
@@ -404,7 +409,41 @@
       </div>
     </div>
 
+    <!-- Delete Modal -->
+    <div class="modal fade" id="delete_modal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div
+            class="modal-body d-flex flex-column align-items-center w-100 gap-3 mt-4 px-4"
+          >
+            <div
+              class="d-flex justify-content-center align-items-center modal-custom-body-config"
+            >
+              <img src="../assets/svgs/Warning.svg" height="54px" alt="" />
+            </div>
+
+            <div class="mb-4">
+              <p class="h5 text-muted mb-2 text-center">Confirm Action</p>
+              <p class="text-sm text-muted text-center">
+                You are about to perform a delete record function. <br />Are you
+                sure?
+              </p>
+            </div>
+          </div>
+          <div class="d-flex gap-2 justify-content-center pb-3 px-4">
+            <button
+              class="bg-new-warning text-white border px-4 py-2 rounded-xs"
+              id="logout_btn"
+            >
+              Yes, delete record.
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="../../src/utils/onClick.js"></script>
     <script src="../../src/utils/functions.js"></script>
+    <script src="../../src/utils/onChange.js"></script>
   </body>
 </html>

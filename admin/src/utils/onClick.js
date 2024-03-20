@@ -97,6 +97,13 @@ document.body.addEventListener("click", (event) => {
     const create = getId("create-user");
     const creating = getId("creating-user");
     const cancel = getId("cancel");
+    const toastContent = getId("toast");
+    const toast = new bootstrap.Toast(toastContent);
+
+    const userModal = getId("add_new_users");
+    const modal = bootstrap.Modal.getInstance(userModal);
+
+    const message = getId("toast-text-content");
 
     const category = getId("category-create-new-user");
     const email = getId("email-create-new-user");
@@ -120,17 +127,23 @@ document.body.addEventListener("click", (event) => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(payload);
-
         if (data.success) {
           setTimeout(function () {
             create.classList.remove("d-none");
             creating.classList.add("d-none");
             cancel.removeAttribute("disabled");
+
+            toast.show();
+            modal.hide();
+
+            message.innerHTML = `You have successfully created user <b>${email.value}</b>`;
+
+            category.value = "0";
+            email.value = "";
           }, 2000);
         } else {
           setTimeout(function () {
-            // set something here
+            toast.hide();
           }, 1000);
         }
       });
@@ -150,5 +163,17 @@ document.body.addEventListener("click", (event) => {
         }
       });
     });
+  }
+
+  if (event.target.id === "set-as-author") {
+    const author = getId("author-create-home-content");
+
+    author.value = "Center for Technopreneurship and Innovation";
+  }
+
+  if (event.target.id === "close_btn_modal") {
+    const myModal = new bootstrap.Modal("#delete_modal");
+
+    myModal.hide();
   }
 });
