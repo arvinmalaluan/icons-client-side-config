@@ -3407,6 +3407,9 @@ function defineDropdownContent(dropdownMenuContent, index) {
     const dropdownItem1 = createDdownItem();
     const dropdownItem2 = createDdownItemDanger(index);
 
+    dropdownItem1.setAttribute("data-bs-toggle", "modal");
+    dropdownItem1.setAttribute("data-bs-target", "#edit_modal");
+
     dropdownItem1.textContent = "Edit User";
     dropdownItem2.textContent = "Delete User";
 
@@ -3419,6 +3422,8 @@ function defineDropdownContent(dropdownMenuContent, index) {
     const dropdownItem2 = createDdownItemDanger(index);
 
     dropdownItem1.textContent = "Edit Articles";
+    dropdownItem1.setAttribute("data-bs-toggle", "modal");
+    dropdownItem1.setAttribute("data-bs-target", "#edit_modal");
     dropdownItem2.textContent = "Delete Articles";
 
     dropdownMenuContent.appendChild(dropdownItem1);
@@ -3430,6 +3435,8 @@ function defineDropdownContent(dropdownMenuContent, index) {
     const dropdownItem2 = createDdownItemDanger(index);
 
     dropdownItem1.textContent = "Edit Programs";
+    dropdownItem1.setAttribute("data-bs-toggle", "modal");
+    dropdownItem1.setAttribute("data-bs-target", "#edit_modal");
     dropdownItem2.textContent = "Delete Programs";
 
     dropdownMenuContent.appendChild(dropdownItem1);
@@ -3443,6 +3450,8 @@ function defineDropdownContent(dropdownMenuContent, index) {
     const dropdownItem4 = createDdownItemDanger(index);
 
     dropdownItem1.textContent = "View Query";
+    dropdownItem1.setAttribute("data-bs-toggle", "modal");
+    dropdownItem1.setAttribute("data-bs-target", "#edit_modal");
     dropdownItem2.textContent = "Reply";
     dropdownItem3.textContent = "Mark as unread";
     dropdownItem4.textContent = "Delete Query";
@@ -3455,16 +3464,15 @@ function defineDropdownContent(dropdownMenuContent, index) {
 
   if (lastPath.includes("community.template.html")) {
     const dropdownItem1 = createDdownItem();
-    const dropdownItem2 = createDdownItem();
-    const dropdownItem3 = createDdownItemDanger(index);
+    const dropdownItem2 = createDdownItemDanger();
 
-    dropdownItem1.textContent = "View Post";
-    dropdownItem2.textContent = "Edit Post";
-    dropdownItem3.textContent = "Delete Post";
+    dropdownItem1.textContent = "Edit Post";
+    dropdownItem1.setAttribute("data-bs-toggle", "modal");
+    dropdownItem1.setAttribute("data-bs-target", "#edit_modal");
+    dropdownItem2.textContent = "Delete Post";
 
     dropdownMenuContent.appendChild(dropdownItem1);
     dropdownMenuContent.appendChild(dropdownItem2);
-    dropdownMenuContent.appendChild(dropdownItem3);
   }
 }
 

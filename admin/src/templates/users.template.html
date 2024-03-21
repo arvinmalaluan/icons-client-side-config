@@ -33,47 +33,63 @@
           />
         </div>
 
-        <div class="w-260 border-r h-100 px-8 py-4">
+        <div
+          class="w-260 d-flex flex-column justify-content-between border-r h-100 px-8 py-4"
+        >
           <div>
-            <img
-              src="../../src/assets/images/logo.png"
-              class="logo-styles"
-              alt=""
-            />
+            <div>
+              <img
+                src="../../src/assets/images/logo.png"
+                class="logo-styles"
+                alt=""
+              />
+            </div>
+
+            <div class="d-flex gap-4 row mt-4">
+              <div>
+                <p class="m-0 border-b text-xs mb-1">Dashboard</p>
+                <div class="d-flex row">
+                  <a href="./home.template.html" class="default">Dashboard</a>
+                </div>
+              </div>
+
+              <div>
+                <p class="m-0 border-b text-xs mb-1">Manage</p>
+                <div class="d-flex row">
+                  <a href="./users.template.html" class="active">Users</a>
+                  <a href="./articles.template.html" class="default"
+                    >Articles</a
+                  >
+                  <a href="./programs.template.html" class="default"
+                    >Programs</a
+                  >
+                  <a href="./queries.template.html" class="default">Queries</a>
+                </div>
+              </div>
+
+              <div>
+                <p class="m-0 border-b text-xs mb-1">Interact</p>
+                <div class="d-flex row">
+                  <a href="./messenger.template.html" class="default"
+                    >Messenger</a
+                  >
+                  <a href="./community.template.html" class="default"
+                    >Community</a
+                  >
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div class="d-flex gap-4 row mt-4">
-            <div>
-              <p class="m-0 border-b text-xs mb-1">Dashboard</p>
-              <div class="d-flex row">
-                <a href="./home.template.html" class="default">Dashboard</a>
-              </div>
-            </div>
-
-            <div>
-              <p class="m-0 border-b text-xs mb-1">Manage</p>
-              <div class="d-flex row">
-                <a href="./users.template.html" class="active">Users</a>
-                <a href="./articles.template.html" class="default">Articles</a>
-                <a href="./programs.template.html" class="default">Programs</a>
-                <a href="./queries.template.html" class="default">Queries</a>
-              </div>
-            </div>
-
-            <div>
-              <p class="m-0 border-b text-xs mb-1">Interact</p>
-              <div class="d-flex row">
-                <a href="./messenger.template.html" class="default"
-                  >Messenger</a
-                >
-                <a href="./community.template.html" class="default"
-                  >Community</a
-                >
-              </div>
-            </div>
+          <div>
+            <button
+              class="w-100 text-start no-border bg-white"
+              data-bs-toggle="modal"
+              data-bs-target="#logout_modal"
+            >
+              Logout
+            </button>
           </div>
-
-          <div></div>
         </div>
       </div>
 
@@ -273,6 +289,117 @@
       </div>
     </div>
 
+    <!-- Edit Modal -->
+    <div
+      class="modal fade"
+      id="edit_modal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <div class="row w-100 gx-0">
+              <div class="col-4">
+                <div class="px-4">
+                  <img
+                    src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+                    class="rounded-circle"
+                    style="width: 100%"
+                    alt="Avatar"
+                  />
+                  <button class="text-sm py-2 rounded border w-100 mt-3">
+                    Remove
+                  </button>
+                </div>
+              </div>
+              <div class="col-8">
+                <div style="padding-right: 24px">
+                  <div class="mb-3">
+                    <label for="status-m-users" class="mb-1 text-sm text-muted"
+                      >Status:</label
+                    >
+                    <select
+                      class="form-select"
+                      aria-label="Small select example"
+                    >
+                      <option selected disabled>Open this select menu</option>
+                      <option value="1">Allowed</option>
+                      <option value="2">Restricted</option>
+                    </select>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="status-m-users" class="mb-1 text-sm text-muted"
+                      >Category:</label
+                    >
+                    <select
+                      class="form-select"
+                      aria-label="Small select example"
+                    >
+                      <option selected disabled>Open this select menu</option>
+                      <option value="1">Startup</option>
+                      <option value="2">Partner</option>
+                    </select>
+                  </div>
+
+                  <p class="text-sm h6 text-muted pb-1 border-b mt-4">
+                    Immutable User Information
+                  </p>
+                  <div class="mt-2">
+                    <p class="text-muted text-sm">
+                      <b>Organization: </b>Flipstorm
+                    </p>
+                    <p class="text-muted text-sm">
+                      <b>Email: </b>flipstorm@gmail.com
+                    </p>
+                    <p class="text-muted text-sm"><b>Username: </b>flipstorm</p>
+                    <p class="text-muted text-sm mt-3">
+                      <b>Last logged in: </b>21/03/2024 9:57 am
+                    </p>
+                    <p class="text-muted text-sm mt-3">
+                      <b>Times reported: </b><span>no record</span>
+                    </p>
+                    <p class="text-muted text-sm">
+                      <b>Posts Created: </b><span>no record</span>
+                    </p>
+                    <p class="text-muted text-sm">
+                      <b>Comments Created: </b><span>no record</span>
+                    </p>
+                    <p class="text-muted text-sm">
+                      <b>Likes/dislikes Created: </b><span>no record</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Modal -->
     <div class="modal fade" id="add_new_users" tabindex="-1">
       <div class="modal-dialog modal-dialog-centered">
@@ -348,6 +475,51 @@
                 </div>
               </button>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Logout Modal -->
+    <div
+      class="modal fade"
+      id="logout_modal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div
+            class="modal-body d-flex flex-column align-items-center w-100 gap-3 mt-4 px-4"
+          >
+            <div
+              class="d-flex justify-content-center align-items-center modal-custom-body-config"
+            >
+              <img src="../assets/svgs/Warning.svg" height="54px" alt="" />
+            </div>
+
+            <div class="mb-4">
+              <p class="h5 text-muted mb-2 text-center">Logging Out</p>
+              <p class="text-sm text-muted text-center">
+                Are you sure you want to log out?
+              </p>
+            </div>
+          </div>
+          <div class="d-flex gap-2 justify-content-center pb-3 px-4">
+            <button
+              type="button"
+              class="border bg-white px-4 py-2 rounded-xs"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button
+              class="bg-new-warning text-white border px-4 py-2 rounded-xs"
+              id="logout_btn"
+            >
+              Logout
+            </button>
           </div>
         </div>
       </div>
