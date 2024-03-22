@@ -3499,9 +3499,10 @@ function populateLogic(data) {
     cbc.appendChild(checkbox);
     row.appendChild(cbc);
 
-    Object.values(rowData).forEach((value) => {
+    Object.values(rowData).forEach((value, index) => {
       const cell = document.createElement("td");
       cell.textContent = value;
+      cell.className = "text-sm align-middle text-whitesmoke";
       row.appendChild(cell);
     });
 
@@ -3589,3 +3590,44 @@ function showPage(page) {
 // Initial pagination and table population
 lastPath !== "messenger.template.html" && updatePagination();
 lastPath !== "messenger.template.html" && populateTableBody();
+
+// let times_clicked = 0;
+// let key_pressed = 0;
+// const startTime = performance.now();
+
+// function calculateDuration() {
+//   const duration = performance.now() - startTime;
+//   const seconds = Math.round(duration / 1000);
+
+//   return seconds;
+// }
+
+// window.addEventListener("click", (e) => {
+//   times_clicked++;
+// });
+
+// window.addEventListener("keyup", (e) => {
+//   key_pressed++;
+// });
+
+// window.addEventListener("beforeunload", (e) => {
+//   const payload = {
+//     page: lastPath,
+//     times_clicked: times_clicked,
+//     duration: calculateDuration(),
+//     modification_made: 0,
+//     keys_pressed: key_pressed,
+//   };
+
+//   fetch("http://localhost:3000/api/v1/https/log/", {
+//     method: "POST",
+//     body: JSON.stringify(payload),
+//     headers: {
+//       "Content-type": "application/json",
+//     },
+//   })
+//     .then((res) => res.json())
+//     .then((data) => {
+//       console.log(data);
+//     });
+// });
