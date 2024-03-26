@@ -322,6 +322,7 @@ ul {
   padding: 16px 24px 16px;
   border-left: 5px solid gainsboro;
   margin-left: 16px;
+  z-index: 0;
 }
 
 .pr-2 {
@@ -492,4 +493,9 @@ textarea:active {
 
 .bg-gray-100 {
   background-color: rgb(243 244 246);
+}
+
+.dropdown-menu {
+  width: 170px !important;
+  z-index: 1 !important;
 }

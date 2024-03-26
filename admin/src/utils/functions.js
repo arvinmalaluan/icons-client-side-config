@@ -3563,8 +3563,11 @@ function updatePagination() {
     li.textContent = page;
     li.addEventListener("click", () => showPage(page));
 
+    li.className = "text-white no-border cursor-pointer";
+
     if (page === currentPage) {
-      li.classList.add("page-number-active");
+      li.className = "page-number-active apply-glass no-border";
+      li.classList.remove = "border";
     }
 
     pagination.appendChild(li);

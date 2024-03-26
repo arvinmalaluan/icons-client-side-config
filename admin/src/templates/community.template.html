@@ -91,16 +91,16 @@
       </div>
 
       <!-- Content -->
-      <div class="w-100 overflow-y-scroll">
+      <div class="w-100 overflow-y-scroll gradient">
         <div class="m-auto row w-90 pt-4 h-100 px-8">
-          <div class="col-7">
+          <div class="col-12">
             <!-- Content -->
             <div class="w-100">
               <div class="m-auto w-100">
                 <!-- Heading -->
                 <div class="w-100 mt-4">
-                  <p class="h2">Community</p>
-                  <p class="text-sm text-muted">
+                  <p class="h2 text-white">Community</p>
+                  <p class="text-sm text-whitesmoke">
                     This page will give you the ability to manage community
                     easier.
                   </p>
@@ -112,18 +112,19 @@
                     <div class="d-flex align-items-center gap-2 w-100">
                       <input
                         type="text"
-                        placeholder="Search User"
-                        class="text-sm px-3 w-full py-1 rounded border"
+                        placeholder="Search Users"
+                        class="text-xs px-4 w-full py-2 rounded-pill bg-gray-100 no-border"
                         onkeyup="tableSearch()"
                         id="search-user"
                       />
                     </div>
 
                     <div
-                      class="w-100 d-flex align-items-center justify-content-end"
+                      class="w-100 d-flex align-items-center gap-1 justify-content-end"
                     >
                       <button
-                        class="border px-2 py-1 text-xs rounded-left"
+                        class="apply-glass px-2 py-2 rounded-pill text-xs no-border"
+                        style="height: 34px; width: 34px"
                         data-bs-toggle="modal"
                         data-bs-target="#add_new_post"
                       >
@@ -133,14 +134,20 @@
                           alt=""
                         />
                       </button>
-                      <button class="border px-2 py-1 text-xs">
+                      <button
+                        class="no-border px-2 py-2 rounded-pill text-xs apply-glass"
+                        style="height: 34px; width: 34px"
+                      >
                         <img
                           src="../assets/svgs/Download.svg"
                           class="icon-sz-16"
                           alt=""
                         />
                       </button>
-                      <button class="border px-2 py-1 text-xs rounded-right">
+                      <button
+                        class="no-border px-2 py-2 rounded-pill text-xs rounded-right apply-glass"
+                        style="height: 34px; width: 34px"
+                      >
                         <img
                           src="../assets/svgs/Print.svg"
                           class="icon-sz-16"
@@ -151,51 +158,57 @@
                   </div>
 
                   <div class="mt-4">
-                    <table
-                      id="table-user"
-                      class="table table-striped table-bordered table-sm"
-                      cellspacing="0"
-                      width="100%"
-                    >
-                      <thead>
-                        <tr>
-                          <th class="th-sm">
-                            <input
-                              class="form-check-input"
-                              type="checkbox"
-                              value=""
-                              id="select-all-checkbox"
-                            />
-                          </th>
-                          <th class="th-sm text-sm pr-2">Title</th>
-                          <th
-                            class="th-sm text-sm pr-2"
-                            style="white-space: nowrap"
-                          >
-                            Date Modified
-                          </th>
-                          <th class="th-sm text-sm text-center">Views</th>
-                          <th class="th-sm text-sm pr-2">
-                            <span style="color: white">Views</span>
-                          </th>
-                        </tr>
-                      </thead>
-                      <tbody id="users-tbl-body">
-                        <tr>
-                          <td>Tiger Nixon</td>
-                          <td>System Architect</td>
-                          <td>Edinburgh</td>
-                        </tr>
-                      </tbody>
-                    </table>
+                    <div class="p-2 mb-4 rounded apply-glass">
+                      <table
+                        id="table-user "
+                        class="table-sm"
+                        cellspacing="0"
+                        width="100%"
+                      >
+                        <thead>
+                          <tr>
+                            <th class="th-sm text-center">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="select-all-checkbox"
+                              />
+                            </th>
+                            <th class="th-sm text-xs text-white align-middle">
+                              Title
+                            </th>
+                            <th class="th-sm text-xs text-white align-middle">
+                              Date Modified
+                            </th>
+                            <th class="th-sm text-xs text-white align-middle">
+                              Views
+                            </th>
+                            <th
+                              class="th-sm text-xs text-white align-middle"
+                            ></th>
+                          </tr>
+                        </thead>
+                        <tbody id="users-tbl-body">
+                          <tr>
+                            <td>Tiger Nixon</td>
+                            <td>System Architect</td>
+                            <td>Edinburgh</td>
+                            <td>61</td>
+                            <td>2011/04/25</td>
+                            <td>$320,800</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
 
                     <div
                       class="pb-4 d-flex justify-content-between align-items-center"
                     >
                       <div class="d-flex align-items-center gap-2">
-                        <p class="text-xs">Rows per table:</p>
+                        <p class="text-xs text-whitesmoke">Rows per table:</p>
                         <select
-                          class="select px-2 py-1 text-xs border rounded outline-none"
+                          class="select px-2 py-1 text-xs no-border text-white rounded outline-none apply-glass"
                           id="page-per-row"
                           onchange="changePagePerRow()"
                         >
@@ -206,7 +219,7 @@
                         </select>
                       </div>
 
-                      <p class="text-muted text-xs">
+                      <p class="text-whitesmoke text-xs">
                         Results:
                         <span>1 - 10</span>
                         of
@@ -222,7 +235,7 @@
             </div>
           </div>
 
-          <div class="col-5 gx-4">
+          <!-- <div class="col-5 gx-4">
             <div class="preview mb-8 stick-2-top">
               <div
                 class="d-flex mb-4 justify-content-between align-items-center"
@@ -315,7 +328,7 @@
                 <span class="font-500">Remarks:</span> random value
               </p>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
